@@ -22,4 +22,4 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-/etc/epkg/epkg $1 $2 $3
+/etc/epkg/epkg $1 $2 $3 $4 $5
