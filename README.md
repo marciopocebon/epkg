@@ -56,7 +56,7 @@
 
 > ./uninstall.sh
 
-# How to execute epath packager
+# How to execute epkg
 
 > epkg options
 
