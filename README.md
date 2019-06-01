@@ -1,5 +1,13 @@
 # The epkg (epath packger)
 
+    ▄███▄   █ ▄▄  █  █▀  ▄▀  
+    █▀   ▀  █   █ █▄█  ▄▀    
+    ██▄▄    █▀▀▀  █▀▄  █ ▀▄  
+    █▄   ▄▀ █     █  █ █   █ 
+    ▀███▀    █      █   ███  
+              ▀    ▀         
+                         
+
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
     <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
