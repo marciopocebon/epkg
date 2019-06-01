@@ -15,7 +15,7 @@
   <a href="https://github.com/entynetproject/epkg/releases">
     <img src="https://img.shields.io/github/release/entynetproject/epkg.svg">
   </a>
-  <a href="https://ru.m.wikipedia.org/wiki/Python">
+  <a href="https://ru.m.wikipedia.org/wiki/сценарий_командной_строки">
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://github.com/entynetproject/ehtools">
