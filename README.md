@@ -42,6 +42,7 @@
        uninstall <package>   Uninstall installed package.
        reinstall <package>   Update installed package.
        search    <package>   Search for packages.
+       update                Update epath packager.
        pkg-list              View all installed packages
        options               Give this help list.
 
