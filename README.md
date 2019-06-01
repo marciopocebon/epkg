@@ -39,6 +39,9 @@
 
 # How to install epkg
 
+    INFO: Epath Packager will be installed to /bin and
+    /usr/local/bin like /bin/epkg and /usr/local/bin/epkg!
+
 > cd epkg
 
 > chmod +x install.sh
