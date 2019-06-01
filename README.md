@@ -37,11 +37,25 @@
     INFO: The epath packager (epkg)
     is an entynetproject projects packager!
 
+# How to install epkg
+
+> cd epkg
+
+> chmod +x install.sh
+
+> ./install.sh
+
+# How to uninstall epkg
+
+> cd epkg
+
+> chmod +x uninstall.sh
+
+> ./uninstall.sh
+
 # How to execute epath packager
 
 > epkg options
-
-#  The epkg usage
 
     Usage: epkg [OPTION...] <ARGUMENT...> (PACKAGE...)
     Copyright (C) 2019, Entynetproject. All Rights Reserved.
