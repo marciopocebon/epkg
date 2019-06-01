@@ -22,4 +22,892 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-/etc/epkg/epkg $1 $2 $3
+        R="\033[1;31m" # Red
+        N="\033[1;37m" # White
+        G="\033[32m" # Green
+        O="\033[1;93m" # Orange
+        B="\033[1;34m" #Blue
+        C="\033[0m" #End
+
+WHO="$( whoami )"
+
+if [[ "$WHO" != "root" ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
+exit
+fi
+
+if [[ "$1" = "options" ]]
+then
+echo
+echo -e ""$N" INFO: The epath packager (epkg) 
+ is an entynetproject projects packager!
+"$C""
+echo  "Usage: epkg [OPTION...] <ARGUMENT...> (PACKAGE...)"
+echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
+echo 
+echo   "   install   <package>   Install selected package."
+echo   "   uninstall <package>   Uninstall installed package."
+echo   "   reinstall <package>   Reinstall installed package."
+echo   "   search    <package>   Search for packages."                   
+echo   "   update                Update epath packager."
+echo   "   pkg-list              View all available packages."
+echo   "   options               Give this help list."
+echo
+exit
+elif [[ "$1" = "install" ]]
+then
+if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d ~/copycat ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+then
+cd ~
+if [[ -d ~/epkg ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+then
+cd ~
+if [[ -d ~/entropy ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/entropy.git
+} &> /dev/null
+cd entropy
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d ~/ehtools-shell ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtools-shell.git
+} &> /dev/null
+cd ehtools-shell
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d ~/honey ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/honey.git
+} &> /dev/null
+cd honey
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d ~/arissploit ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/arissploit.git
+} &> /dev/null
+cd arissploit
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtools.git
+} &> /dev/null
+cd ehtools
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
+then
+cd ~
+if [[ -d /root/ehtoolslite ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall ehtoolslite
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtoolslite.git
+} &> /dev/null
+cd ehtoolslite
+chmod +x install.sh
+./install.sh
+exit
+fi
+elif [[ "$1" = "pkg-list" ]]
+then
+sleep 1
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.0/"$R"epkg,epath-packager"$C""
+echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.0/"$R"copycat,copycat-toolkit"$C""
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.0/"$R"entropy,CNVD-2017-02776"$C""
+echo -e ""$G"com.entynetproject.ehtools-shell"$C"/stable 1.3/"$R"ehtools-shell,ehtsh"$C""
+echo -e ""$G"com.entynetproject.honey"$C"/stable 1.0/"$R"honey,honey-encryptor"$C""
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
+echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
+echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
+exit
+elif [[ "$1" = "reinstall" ]]
+then
+if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d ~/copycat ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd copycat
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/copycat.git
+} &> /dev/null
+cd copycat
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+then
+cd ~
+if [[ -d ~/epkg ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+then
+cd ~
+if [[ -d ~/entropy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd entropy
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+{
+git clone https://github.com/entynetproject/entropy.git
+} &> /dev/null
+cd entropy
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d ~/ehtools-shell ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd ehtools-shell
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtools-shell.git
+} &> /dev/null
+cd ehtools-shell
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d ~/honey ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd honey
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+{
+git clone https://github.com/entynetproject/honey.git
+} &> /dev/null
+cd honey
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d ~/arissploit ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd arissploit
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/arissploit.git
+} &> /dev/null
+cd arissploit
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd /root/ehtools
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/ehtools.git
+} &> /dev/null
+cd ehtools
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
+then
+cd ~
+if [[ -d /root/ehtoolslite ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtoolslite
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd /root/ehtoolslite
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/ehtoolslite.git
+} &> /dev/null
+cd ehtoolslite
+chmod +x install.sh
+./install.sh
+exit
+fi
+elif [[ "$1" = "search" ]]
+then
+if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.0/"$R"copycat,copycat-toolkit"$C""
+exit
+elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+then
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.0/"$R"entropy,CNVD-2017-02776"$C""
+exit
+elif [[ "$2" = "ehtools-shell" || "$2" = "ehtsh" ]]
+then
+echo -e ""$G"com.entynetproject.ehtools-shell"$C"/stable 1.3/"$R"ehtools-shell,ehtsh"$C""
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+echo -e ""$G"com.entynetproject.honey"$C"/stable 1.0/"$R"honey,honey-encryptor"$C""
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework" ]]
+then
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+then
+echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
+exit
+elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
+then
+echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
+elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+then
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.0/"$R"epkg,epath-packager"$C""
+exit
+fi
+elif [[ "$1" = "uninstall" ]]
+then
+if [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+then
+cd ~
+if [[ -d ~/epkg ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d ~/copycat ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd copycat
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+then
+cd ~
+if [[ -d ~/entropy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd entropy
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d ~/ehtools-shell ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd ehtools-shell
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d ~/honey ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd honey
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d ~/arissploit ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd arissploit
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd /root/ehtools
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install ehtoolslite
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd /root/ehtoolslite
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+fi
+elif [[ "$1" = "update" ]]
+then
+cd ~
+if [[ -d ~/epkg ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"update: "$C"epkg"
+sleep 1
+echo -e ""$B"Installing update..."$C""
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+sleep 1
+echo -e ""$G"Successfully updated..."$C""
+exit
+fi
+echo -e ""$N"epkg: "$R"error: "$C"need an action option"
