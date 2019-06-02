@@ -71,6 +71,20 @@
        pkg-list              View all installed packages
        options               Give this help list.
 
+# The epkg examples
+
+>  # To install package (example: ehtools)
+
+> epkg install ehtools
+
+> # To reinstall package (example: ehtools)
+
+> epkg reinstall ehtools
+
+> # To uninstall package (example: ehtools)
+
+> epkg uninstall ehtools
+
 # The epkg MIT license
 
     MIT License
