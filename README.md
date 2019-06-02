@@ -34,8 +34,9 @@
 
 # About epath packager
 
-    INFO: The epath packager (epkg)
-    is an entynetproject projects packager!
+    INFO: The epath packager (epkg) is a packager 
+    for developers with big functional and with most 
+    useful options like install/reinstall/uninstall!
 
 # How to install epkg
 
