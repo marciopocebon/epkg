@@ -53,7 +53,7 @@ echo   "   reinstall <package>   Reinstall installed package."
 echo   "   search    <package>   Search for packages."                   
 echo   "   update                Update epath packager."
 echo   "   pkg-list              View all available packages."
-echo   "   options               Give this help list."
+echo   "   options               View epath packager options."
 echo
 exit
 elif [[ "$1" = "install" ]]
