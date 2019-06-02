@@ -68,8 +68,8 @@
        uninstall <package>   Uninstall installed package.
        search    <package>   Search for packages.
        update                Update epath packager.
-       pkg-list              View all availble packages
-       options               Give this help list.
+       pkg-list              View all available packages.
+       options               View epath packager options.
 
 # The epkg options
 
@@ -80,8 +80,8 @@
 | epkg uninstall | Uninstall selected package |
 | epkg search | Search for packages |
 | epkg update | Update epath packager |
-| epkg update | Update epath packager |
-| epkg options | View epkg options |
+| epkg pkg-list | View all available packages |
+| epkg options | View epath packager options |
 
 # The epkg MIT license
 
