@@ -71,18 +71,6 @@
        pkg-list              View all available packages.
        options               View epath packager options.
 
-# The epkg options
-
-| Command | Description |
-| --- | --- |
-| epkg install | Install selected package |
-| epkg reinstall | Reinstall selected package |
-| epkg uninstall | Uninstall selected package |
-| epkg search | Search for packages |
-| epkg update | Update epath packager |
-| epkg pkg-list | View all available packages |
-| epkg options | View epath packager options |
-
 # The epkg MIT license
 
     MIT License
