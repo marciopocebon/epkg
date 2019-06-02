@@ -64,26 +64,24 @@
     Copyright (C) 2019, Entynetproject. All Rights Reserved.
 
        install   <package>   Install selected package.
+       reinstall <package>   Reinstall installed package.
        uninstall <package>   Uninstall installed package.
-       reinstall <package>   Update installed package.
        search    <package>   Search for packages.
        update                Update epath packager.
-       pkg-list              View all installed packages
+       pkg-list              View all availble packages
        options               Give this help list.
 
-# The epkg examples
+# The epkg options
 
->  # To install package (example: ehtools)
-
-> epkg install ehtools
-
-> # To reinstall package (example: ehtools)
-
-> epkg reinstall ehtools
-
-> # To uninstall package (example: ehtools)
-
-> epkg uninstall ehtools
+| Command | Description |
+| --- | --- |
+| epkg install | Install selected package |
+| epkg reinstall | Reinstall selected package |
+| epkg uninstall | Uninstall selected package |
+| epkg search | Search for packages |
+| epkg update | Update epath packager |
+| epkg update | Update epath packager |
+| epkg options | View epkg options |
 
 # The epkg MIT license
 
