@@ -82,9 +82,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/epkg.git
+git clone https://github.com/entynetproject/copycat.git
 } &> /dev/null
-cd epkg
+cd copycat
 chmod +x install.sh
 ./install.sh
 exit
