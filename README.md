@@ -69,8 +69,8 @@
        uninstall <package>   Uninstall installed package.
        search    <package>   Search for packages.
        update                Update epath packager.
-       pkg-list              View all available packages.
-       options               View epath packager options.
+       pkg-list              Show all available packages.
+       options               Show epath packager options.
 
 # The epkg MIT license
 
