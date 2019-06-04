@@ -52,8 +52,8 @@ echo   "   uninstall <package>   Uninstall installed package."
 echo   "   reinstall <package>   Reinstall installed package."
 echo   "   search    <package>   Search for packages."                   
 echo   "   update                Update epath packager."
-echo   "   pkg-list              View all available packages."
-echo   "   options               View epath packager options."
+echo   "   pkg-list              Show all available packages."
+echo   "   options               Show epath packager options."
 echo
 exit
 elif [[ "$1" = "install" ]]
