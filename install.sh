@@ -56,9 +56,8 @@ echo -e ""$R"The epkg directory not found!"$C""
 sleep 1
 echo -e ""$B"Installing epkg to "$DIR"..."$C""
 {
-git clone https://github.com/entynetproject/
+git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
-epkg.git
 cd epkg
 chmod +x install.sh
 fi
