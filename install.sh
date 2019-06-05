@@ -67,7 +67,7 @@ echo -e ""$B"Installing epkg to /etc..."$C""
 sleep 0.5
 mkdir /etc/epkg
 cp ~/epkg/etc/epkg /etc/epkg
-cp -r ~/epkg/etc/epkg.cfg.d /etc/epkg
+mkdir /etc/epkg/epkg.cfg.d
 sleep 0.5
 echo -e ""$B"Installing epkg to /bin..."$C""
 sleep 0.5
