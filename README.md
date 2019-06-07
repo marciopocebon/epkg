@@ -73,7 +73,7 @@
 
 # The epkg examples
 
-> epkg install <package>
+> epkg install < package >
 
     epkg: install: <package>
 
