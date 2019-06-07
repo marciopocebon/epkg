@@ -87,7 +87,7 @@
     
 # The epkg warnings
 
-> epkg reinstall <package>
+> epkg reinstall package
        
     epkg: warning: package is not installed
     Do you want to install it? [Y/n] 
