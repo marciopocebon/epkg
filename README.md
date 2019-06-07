@@ -73,28 +73,28 @@
 
 # The epkg examples
 
-> epkg install < package >
+> epkg install package
 
-    epkg: install: <package>
+    epkg: install: package
 
-> epkg reinstall <package>
+> epkg reinstall package
      
-    epkg: reinstall: <package>
+    epkg: reinstall: package
     
-> epkg uninstall <package>
+> epkg uninstall package
     
-    epkg: uninstall: <package>
+    epkg: uninstall: package
     
 # The epkg warnings
 
 > epkg reinstall <package>
        
-    epkg: warning: <package> is not installed
+    epkg: warning: package is not installed
     Do you want to install it? [Y/n] 
     
-> epkg install <package>
+> epkg install package
        
-    epkg: warning: <package> is already installed
+    epkg: warning: package is already installed
     Do you want to reinstall it? [Y/n]
 
 # The epkg MIT license
