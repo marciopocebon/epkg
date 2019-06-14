@@ -63,13 +63,13 @@
     Usage: epkg [OPTION...] <package...>
     Copyright (C) 2019, Entynetproject. All Rights Reserved.
 
-       install   <package>   Install selected package.
-       reinstall <package>   Reinstall installed package.
-       uninstall <package>   Uninstall installed package.
-       search    <package>   Search for packages.
-       update                Update epath packager.
-       pkg-list              Show all available packages.
-       options               Show epath packager options.
+       install   <package>  Install selected package.
+       reinstall <package>  Reinstall installed package.
+       uninstall <package>  Uninstall installed package.
+       search    <package>  Search for packages.
+       update               Update epath packager.
+       pkg-list             Show all available packages.
+       options              Show epath packager options.
 
 # The epkg examples
 
