@@ -41,9 +41,11 @@ fi
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
 echo
-echo -e ""$N" INFO: The epath packager (epkg) 
- is an entynetproject projects packager!
-"$C""
+echo -e ""$N" INFO: The epath packager (epkg)" 
+echo -e ""$N" is a packager for developers with"
+echo -e ""$N" big functional and with most useful"
+echo -e ""$N" options like install/reinstall/uninstall!"$C""
+echo -e 
 echo  "Usage: epkg [OPTION...] <package...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
