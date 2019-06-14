@@ -38,7 +38,7 @@ echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
 exit
 fi
 
-if [[ "$1" = "options" ]]
+if [[ "$1" = "options" || "$1" = "help" ]]
 then
 echo
 echo -e ""$N" INFO: The epath packager (epkg) 
@@ -47,13 +47,13 @@ echo -e ""$N" INFO: The epath packager (epkg)
 echo  "Usage: epkg [OPTION...] <package...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
-echo   "   install   <package>   Install selected package."
-echo   "   uninstall <package>   Uninstall installed package."
-echo   "   reinstall <package>   Reinstall installed package."
-echo   "   search    <package>   Search for packages."                   
-echo   "   update                Update epath packager."
-echo   "   pkg-list              Show all available packages."
-echo   "   options               Show epath packager options."
+echo   "   install   <package>  Install selected package."
+echo   "   uninstall <package>  Uninstall installed package."
+echo   "   reinstall <package>  Reinstall installed package."
+echo   "   search    <package>  Search for packages."                   
+echo   "   update               Update epath packager."
+echo   "   pkg-list             Show all available packages."
+echo   "   options              Show epath packager options."
 echo
 exit
 elif [[ "$1" = "install" ]]
