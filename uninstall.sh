@@ -45,16 +45,24 @@ fi
 sleep 0.5
 echo -e ""$R"Removing /etc/epkg..."$C""
 sleep 0.5
+{
 rm -r /etc/epkg
+} &> /dev/null
 sleep 0.5
 echo -e ""$R"Removing /usr/local/bin/epkg..."$C""
 sleep 0.5
+{
 rm /usr/local/bin/epkg
+} &> /dev/null
 sleep 0.5
 echo -e ""$R"Removing /bin/epkg..."$C""
 sleep 0.5
+{
 rm /bin/epkg
+} &> /dev/null
 sleep 0.5
 echo -e ""$R"Removing ~/epkg..."$C""
+{
 rm -r ~/epkg
+} &> /dev/null
 sleep 1
