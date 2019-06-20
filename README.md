@@ -1,4 +1,4 @@
-# The epkg (epath packger)
+# Epath Packager (epkg)
 
        ___     _ __            _      _         ___                    _               __ _                  
       | __|   | '_ \  __ _    | |_   | |_      | _ \  __ _     __     | |__   __ _    / _` |   ___      _ _  
@@ -33,7 +33,7 @@
 
 # About epath packager
 
-    INFO: The epath packager (epkg) is a packager 
+    INFO: Epath Packager (epkg) is a packager 
     for developers with big functional and with most 
     useful options like install/reinstall/uninstall!
 
@@ -67,9 +67,9 @@
        reinstall <package>  Reinstall installed package.
        uninstall <package>  Uninstall installed package.
        search    <package>  Search for packages.
-       update               Update epath packager.
+       update               Update Epath Packager.
        pkg-list             Show all available packages.
-       options              Show epath packager options.
+       options              Show Epath Packager options.
 
 # The epkg examples
 
