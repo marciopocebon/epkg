@@ -71,7 +71,7 @@
        pkg-list             Show all available packages.
        options              Show Epath Packager options.
 
-# The epkg examples
+# Epath packager examples
 
 > epkg install package
 
@@ -85,7 +85,7 @@
     
     epkg: uninstall: package
     
-# The epkg warnings
+# Epath packager warnings
 
 > epkg reinstall package
        
