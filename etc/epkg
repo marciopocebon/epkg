@@ -881,7 +881,10 @@ chmod +x uninstall.sh
 ./uninstall.sh
 exit
 fi
-elif [[ "$1" = "update" ]]
+echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+fi
+
+if [[ "$1" = "update" ]]
 then
 cd ~
 if [[ -d ~/epkg ]]
@@ -922,6 +925,5 @@ sleep 1
 echo -e ""$G"Successfully updated..."$C""
 exit
 fi
-echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
-fi
+
 echo -e ""$N"epkg: "$R"error: "$C"need an action option"
