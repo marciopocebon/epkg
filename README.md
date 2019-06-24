@@ -85,6 +85,17 @@
     
     epkg: uninstall: package
     
+# Epath packager errors
+
+> epkg
+
+    epkg: error: need an action option
+    
+> epkg install ebot
+
+    epkg: error: package ebot is not available
+
+    
 # Epath packager warnings
 
 > epkg reinstall package
@@ -96,7 +107,7 @@
        
     epkg: warning: package is already installed
     Do you want to reinstall it? [Y/n]
-
+    
 # The epkg MIT license
 
     MIT License
