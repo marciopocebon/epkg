@@ -302,6 +302,7 @@ chmod +x install.sh
 exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
 fi
 
 if [[ "$1" = "pkg-list" ]]
@@ -609,6 +610,7 @@ chmod +x install.sh
 exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
 fi
 
 if [[ "$1" = "search" ]]
@@ -646,6 +648,7 @@ echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
 exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
 fi
 
 if [[ "$1" = "uninstall" ]]
@@ -882,6 +885,7 @@ chmod +x uninstall.sh
 exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
 fi
 
 if [[ "$1" = "update" ]]
@@ -910,6 +914,7 @@ sleep 0.5
 echo -e ""$N"epkg: "$B"update: "$C"epkg"
 sleep 1
 echo -e ""$B"Installing update..."$C""
+{
 cd epkg
 chmod +x uninstall.sh
 ./uninstall.sh
@@ -921,6 +926,7 @@ git clone https://github.com/entynetproject/epkg.git
 cd epkg
 chmod +x install.sh
 ./install.sh
+} &> /dev/null
 sleep 1
 echo -e ""$G"Successfully updated..."$C""
 exit
