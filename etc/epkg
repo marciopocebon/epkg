@@ -238,36 +238,6 @@ cd arissploit
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ebot" || "$2" = "ehtools-assistant" ]]
-then
-cd ~
-if [[ -d /root/ebot ]]
-then
-sleep 0.5
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
-sleep 0.5
-echo -n "Do you want to reinstall it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg reinstall ebot
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$O"install: "$C""$2""
-{
-git clone https://github.com/entynetproject/ebot.git
-} &> /dev/null
-cd ebot
-chmod +x install.sh
-./install.sh
-exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
 cd ~
@@ -338,7 +308,6 @@ echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.0/"$R"entropy,CNVD-2017-027
 echo -e ""$G"com.entynetproject.ehtools-shell"$C"/stable 1.3/"$R"ehtools-shell,ehtsh"$C""
 echo -e ""$G"com.entynetproject.honey"$C"/stable 1.0/"$R"honey,honey-encryptor"$C""
 echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
-echo -e ""$G"com.entynetproject.ebot"$C"/stable 1.0/"$R"ebot,ehtools-assistant"$C""
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
 echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
 exit
@@ -560,42 +529,6 @@ cd arissploit
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ebot" || "$2" = "ehtools-assistant" ]]
-then
-cd ~
-if [[ -d /root/ebot ]]
-then
-sleep 0.5
-else
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
-sleep 0.5
-echo -n "Do you want to install it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg install ebot
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd /root/ebot
-chmod +x uninstall.sh
-./uninstall.sh
-cd ~
-sleep 0.5
-{
-git clone https://github.com/entynetproject/ebot.git
-} &> /dev/null
-cd ebot
-chmod +x install.sh
-./install.sh
-exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
 cd ~
@@ -701,9 +634,6 @@ echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,eht
 elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
 then
 echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
-elif [[ "$2" = "ebot" || "$2" = "ehtools-assistant" ]]
-then
-echo -e ""$G"com.entynetproject.ebot"$C"/stable 1.0/"$R"ebot,ehtools-assistant"$C""
 exit
 fi
 elif [[ "$1" = "uninstall" ]]
@@ -879,34 +809,6 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd arissploit
-chmod +x uninstall.sh
-./uninstall.sh
-exit
-elif [[ "$2" = "ebot" || "$2" = "ehtools-assistant" ]]
-then
-cd ~
-if [[ -d /root/ebot ]]
-then
-sleep 0.5
-else
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
-sleep 0.5
-echo -n "Do you want to install it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg install ebot
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd /root/ebot
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
