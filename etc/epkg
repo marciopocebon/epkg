@@ -390,7 +390,7 @@ chmod +x install.sh
 ./install.sh
 exit
 
-if [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
 if [[ -d ~/phonia ]]
