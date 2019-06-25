@@ -690,7 +690,7 @@ if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.0/"$R"copycat,copycat-toolkit"$C""
 exit
-if [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 echo -e ""$G"com.entynetproject.phonia"$C"/stable 0.1.0/"$R"phonia,phonia-toolkit"$C""
 exit
