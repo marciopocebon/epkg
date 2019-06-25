@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://github.com/entynetproject/ehtools">
-      <img src="https://img.shields.io/badge/core-epath-red.svg?maxAge=2592000">
+      <img src="https://img.shields.io/badge/firmware-epath-red.svg?maxAge=2592000">
  </a>
   <a href="https://github.com/entynetproject/epkg/issues?q=is%3Aissue+is%3Aclosed">
       <img src="https://img.shields.io/github/issues/entynetproject/epkg.svg">
@@ -30,6 +30,14 @@
     <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
  </a>
 </p>
+
+# Epath packager credits
+
+    Name      : Epath Packager 
+    Developer : Entynetproject
+    Version   : v1.2 (epkg-v1.2-dev)
+    Firmware  : Epath Firmware (ehtools path)
+    Site      : https://entynetproject.simplesite.com/
 
 # About epath packager
 
