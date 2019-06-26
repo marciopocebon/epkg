@@ -1018,7 +1018,7 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"update: "$C"epkg"
 sleep 1
-echo -e ""$B"Installing update..."$C""
+echo -e ""\033[34m"Installing update..."$C""
 {
 cd epkg
 chmod +x uninstall.sh
@@ -1034,6 +1034,7 @@ chmod +x install.sh
 } &> /dev/null
 sleep 1
 echo -e ""$G"Successfully updated..."$C""
+sleep 1
 exit
 fi
 
