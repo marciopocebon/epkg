@@ -47,14 +47,11 @@ DIR="$( pwd )"
 if [[ -d ~/epkg ]]
 then
 sleep 0.5
-echo -e ""$G"The epkg directory found!"$C""
 sleep 0.5
 else
 cd ~
 sleep 1
-echo -e ""$R"The epkg directory not found!"$C""
 sleep 1
-echo -e ""$B"Installing epkg to "$DIR"..."$C""
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
@@ -62,7 +59,6 @@ cd epkg
 chmod +x install.sh
 fi
 sleep 1
-echo -e ""$B"Installing epkg to /etc..."$C""
 sleep 0.5
 {
 mkdir /etc/epkg
@@ -70,19 +66,16 @@ cp ~/epkg/etc/epkg /etc/epkg
 mkdir /etc/epkg/epkg.cfg.d
 } &> /dev/null
 sleep 0.5
-echo -e ""$B"Installing epkg to /bin..."$C""
 sleep 0.5
 {
 cp ~/epkg/bin/epkg /bin
 } &> /dev/null
 sleep 0.5
-echo -e ""$B"Installing epkg to /usr/local/bin..."$C""
 sleep 0.5
 {
 cp ~/epkg/bin/epkg /usr/local/bin
 } &> /dev/null
 sleep 0.5
-echo -e ""$B"Finishing epkg installation..."$C""
 sleep 0.5
 {
 chmod +x /etc/epkg/epkg
