@@ -26,7 +26,7 @@
         N="\033[1;37m" # White
         G="\033[32m" # Green
         O="\033[1;93m" # Orange
-        B="\033[1;34m" #Blue
+        B="\033[34m" #Blue
         C="\033[0m" #End
 
 WHO="$( whoami )"
