@@ -997,27 +997,6 @@ fi
 if [[ "$1" = "update" ]]
 then
 cd ~
-if [[ -d ~/epkg ]]
-then
-sleep 0.5
-else
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
-sleep 0.5
-echo -n "Do you want to install it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg install epkg
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$B"update: "$C"epkg"
 sleep 1
 echo -e ""$BS"Installing update..."$C""
 {
