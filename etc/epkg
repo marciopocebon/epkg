@@ -1013,7 +1013,7 @@ chmod +x install.sh
 ./install.sh
 } &> /dev/null
 sleep 1
-echo -e ""$G"Successfully updated..."$C""
+echo -e ""$G"Successfully updated."$C""
 sleep 1
 exit
 fi
