@@ -22,8 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-        RS="\033[1;31m"
-        R="\033[31m" # Red
+        R="\033[1;31m" # Red
         N="\033[1;37m" # White
         G="\033[32m" # Green
         O="\033[1;93m" # Orange
@@ -35,9 +34,9 @@ WHO="$( whoami )"
 if [[ "$WHO" != "root" ]]
 then
 sleep 1
-echo -e "$RS"run it as"$C" "$O"root"$C"
+echo -e "$R"run it as"$C" "$O"root"$C"
 sleep 1
-echo -e "$RS"or use"$C" "$O"sudo"$C"
+echo -e "$R"or use"$C" "$O"sudo"$C"
 sleep 1
 exit
 fi
