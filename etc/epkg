@@ -63,8 +63,8 @@ if [[ "$1" = "install" ]]
 then
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/copycat ]]
+cd ~
+if [[ -d ~/copycat ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -81,7 +81,7 @@ epkg reinstall copycat
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -94,8 +94,8 @@ exit
 
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/phonia ]]
+cd ~
+if [[ -d ~/phonia ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -112,7 +112,7 @@ epkg reinstall phonia
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -125,8 +125,8 @@ exit
 
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
-cd /etc
-if [[ -d /etc/mouse ]]
+cd ~
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -143,7 +143,7 @@ epkg reinstall mouse
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -156,8 +156,8 @@ exit
 
 elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
 then
-cd /etc
-if [[ -d /etc/epkg ]]
+cd ~
+if [[ -d ~/epkg ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -174,7 +174,7 @@ epkg reinstall epkg
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -186,8 +186,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
 then
-cd /etc
-if [[ -d /etc/entropy ]]
+cd ~
+if [[ -d ~/entropy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -204,7 +204,7 @@ epkg reinstall entropy
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -216,7 +216,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /etc/ehtsh ]]
 then
 sleep 0.5
@@ -234,7 +234,7 @@ epkg reinstall ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -246,8 +246,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
-cd /etc
-if [[ -d /etc/honey ]]
+cd ~
+if [[ -d ~/honey ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -264,7 +264,7 @@ epkg reinstall honey
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -276,8 +276,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
-cd /etc
-if [[ -d /etc/arissploit ]]
+cd ~
+if [[ -d ~/arissploit ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -294,7 +294,7 @@ epkg reinstall arissploit
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -306,7 +306,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtools ]]
 then
 sleep 0.5
@@ -324,7 +324,7 @@ epkg reinstall ehtools
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -336,7 +336,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtoolslite ]]
 then
 sleep 0.5
@@ -354,7 +354,7 @@ epkg reinstall ehtoolslite
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -388,8 +388,8 @@ if [[ "$1" = "reinstall" ]]
 then
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/copycat ]]
+cd ~
+if [[ -d ~/copycat ]]
 then
 sleep 0.5
 else
@@ -407,13 +407,13 @@ epkg install copycat
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd copycat
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/copycat.git
@@ -425,8 +425,8 @@ exit
 
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/phonia ]]
+cd ~
+if [[ -d ~/phonia ]]
 then
 sleep 0.5
 else
@@ -444,13 +444,13 @@ epkg install phonia
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd phonia
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/phonia.git
@@ -462,8 +462,8 @@ exit
 
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
-cd /etc
-if [[ -d /etc/mouse ]]
+cd ~
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 else
@@ -481,13 +481,13 @@ epkg install mouse
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd mouse
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/mouse.git
@@ -499,8 +499,8 @@ exit
 
 elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
 then
-cd /etc
-if [[ -d /etc/epkg ]]
+cd ~
+if [[ -d ~/epkg ]]
 then
 sleep 0.5
 else
@@ -518,13 +518,13 @@ epkg install epkg
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd epkg
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
@@ -535,8 +535,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
 then
-cd /etc
-if [[ -d /etc/entropy ]]
+cd ~
+if [[ -d ~/entropy ]]
 then
 sleep 0.5
 else
@@ -554,13 +554,13 @@ epkg install entropy
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd entropy
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/entropy.git
@@ -571,7 +571,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /etc/ehtsh ]]
 then
 sleep 0.5
@@ -590,12 +590,12 @@ epkg install ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 cd ehtsh
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 {
@@ -607,8 +607,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
-cd /etc
-if [[ -d /etc/honey ]]
+cd ~
+if [[ -d ~/honey ]]
 then
 sleep 0.5
 else
@@ -626,12 +626,12 @@ epkg install honey
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 cd honey
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 {
@@ -643,8 +643,8 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
-cd /etc
-if [[ -d /etc/arissploit ]]
+cd ~
+if [[ -d ~/arissploit ]]
 then
 sleep 0.5
 else
@@ -662,13 +662,13 @@ epkg install arissploit
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd arissploit
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/arissploit.git
@@ -679,7 +679,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtools ]]
 then
 sleep 0.5
@@ -698,13 +698,13 @@ epkg install ehtools
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd /root/ehtools
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/ehtools.git
@@ -715,7 +715,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtoolslite ]]
 then
 sleep 0.5
@@ -734,13 +734,13 @@ epkg install ehtoolslite
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd /root/ehtoolslite
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/ehtoolslite.git
@@ -805,8 +805,8 @@ if [[ "$1" = "uninstall" ]]
 then
 if [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
 then
-cd /etc
-if [[ -d /etc/epkg ]]
+cd ~
+if [[ -d ~/epkg ]]
 then
 sleep 0.5
 else
@@ -824,7 +824,7 @@ epkg install epkg
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd epkg
@@ -833,8 +833,8 @@ chmod +x uninstall.sh
 exit
 elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/copycat ]]
+cd ~
+if [[ -d ~/copycat ]]
 then
 sleep 0.5
 else
@@ -852,7 +852,7 @@ epkg install copycat
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd copycat
@@ -862,8 +862,8 @@ exit
 
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
-cd /etc
-if [[ -d /etc/phonia ]]
+cd ~
+if [[ -d ~/phonia ]]
 then
 sleep 0.5
 else
@@ -881,7 +881,7 @@ epkg install phonia
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd phonia
@@ -891,8 +891,8 @@ exit
 
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
-cd /etc
-if [[ -d /etc/mouse ]]
+cd ~
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 else
@@ -910,7 +910,7 @@ epkg install mouse
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd mouse
@@ -920,8 +920,8 @@ exit
 
 elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
 then
-cd /etc
-if [[ -d /etc/entropy ]]
+cd ~
+if [[ -d ~/entropy ]]
 then
 sleep 0.5
 else
@@ -939,18 +939,18 @@ epkg install entropy
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd entropy
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /etc/ehtsh ]]
 then
 sleep 0.5
@@ -969,19 +969,19 @@ epkg install ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd ehtsh
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
-cd /etc
-if [[ -d /etc/honey ]]
+cd ~
+if [[ -d ~/honey ]]
 then
 sleep 0.5
 else
@@ -999,19 +999,19 @@ epkg install honey
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd honey
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
-cd /etc
-if [[ -d /etc/arissploit ]]
+cd ~
+if [[ -d ~/arissploit ]]
 then
 sleep 0.5
 else
@@ -1029,7 +1029,7 @@ epkg install arissploit
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd arissploit
@@ -1038,7 +1038,7 @@ chmod +x uninstall.sh
 exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtools ]]
 then
 sleep 0.5
@@ -1057,7 +1057,7 @@ epkg install ehtools
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd /root/ehtools
@@ -1066,7 +1066,7 @@ chmod +x uninstall.sh
 exit
 elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
 then
-cd /etc
+cd ~
 if [[ -d /root/ehtools ]]
 then
 sleep 0.5
@@ -1085,7 +1085,7 @@ epkg install ehtoolslite
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd /root/ehtoolslite
@@ -1103,7 +1103,7 @@ cd /etc
 sleep 1
 echo -e ""$BS"Installing update..."$C""
 {
-cd epkg
+cd /etc/epkg
 chmod +x uninstall.sh
 ./uninstall.sh
 cd /etc
@@ -1111,7 +1111,7 @@ sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
-cd epkg
+cd /etc/epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
