@@ -149,7 +149,7 @@ echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
 git clone https://github.com/entynetproject/invader.git
 } &> /dev/null
-cd invader
+cd invader/setup
 chmod +x install.sh
 ./install.sh
 exit
@@ -516,7 +516,7 @@ fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd invader
+cd invader/setup
 chmod +x uninstall.sh
 ./uninstall.sh
 cd ~
@@ -524,7 +524,7 @@ sleep 0.5
 {
 git clone https://github.com/entynetproject/invader.git
 } &> /dev/null
-cd invader
+cd invader/setup
 chmod +x install.sh
 ./install.sh
 exit
@@ -986,7 +986,7 @@ fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd invader
+cd invader/setup
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
