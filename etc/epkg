@@ -126,7 +126,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d ~/Invader ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -147,9 +147,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/invader.git
+git clone https://github.com/entynetproject/Invader.git
 } &> /dev/null
-cd invader/setup
+cd Invader/setup
 chmod +x install.sh
 ./install.sh
 exit
@@ -495,7 +495,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d ~/Invader ]]
 then
 sleep 0.5
 else
@@ -516,15 +516,15 @@ fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd invader/setup
+cd Invader/setup
 chmod +x uninstall.sh
 ./uninstall.sh
 cd ~
 sleep 0.5
 {
-git clone https://github.com/entynetproject/invader.git
+git clone https://github.com/entynetproject/Invader.git
 } &> /dev/null
-cd invader/setup
+cd Invader/setup
 chmod +x install.sh
 ./install.sh
 exit
@@ -965,7 +965,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d ~/Invader ]]
 then
 sleep 0.5
 else
@@ -986,7 +986,7 @@ fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd invader/setup
+cd Invader/setup
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
