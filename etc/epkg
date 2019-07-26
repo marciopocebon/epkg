@@ -1206,15 +1206,16 @@ cd /etc
 sleep 1
 echo -e ""$BS"Installing update..."$C""
 {
-cd /etc/epkg
+cd
+cd epkg
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd
 sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
-cd /etc/epkg
+cd epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
