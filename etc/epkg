@@ -154,6 +154,38 @@ chmod +x install.sh
 ./install.sh
 exit
 
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d ~/entypreter ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/entypreter.git
+} &> /dev/null
+cd entypreter
+chmod +x install.sh
+./install.sh
+exit
+
+
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
@@ -411,6 +443,7 @@ echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C"
 echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
 echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
 echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
+echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
 echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
 echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
@@ -525,6 +558,43 @@ sleep 0.5
 git clone https://github.com/entynetproject/invader.git
 } &> /dev/null
 cd invader/setup
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d ~/entypreter ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd entypreter
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/entypreter.git
+} &> /dev/null
+cd entypreter
 chmod +x install.sh
 ./install.sh
 exit
@@ -869,6 +939,10 @@ elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
 exit
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
+exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
@@ -991,6 +1065,34 @@ chmod +x uninstall.sh
 ./uninstall.sh
 exit
 
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d ~/entypreter ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd entypreter
+chmod +x uninstall.sh
+./uninstall.sh
+exit
 
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
