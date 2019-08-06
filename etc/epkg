@@ -123,10 +123,10 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "ecli" || "$2" = "entynet-cli" ]]
+elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
 then
 cd ~
-if [[ -d ~/ecli ]]
+if [[ -d ~/ECLI ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -139,7 +139,7 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg reinstall ecli
+epkg reinstall ECLI
 fi
 exit
 fi
@@ -147,9 +147,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/ecli.git
+git clone https://github.com/entynetproject/ECLI.git
 } &> /dev/null
-cd ecli
+cd ECLI
 chmod +x install.sh
 ./install.sh
 exit
@@ -467,7 +467,7 @@ if [[ "$1" = "pkg-list" ]]
 then
 sleep 1
 echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
-echo -e ""$G"com.entynetproject.ecli"$C"/stable 4.0/"$R"ecli,entynet-cli"$C""
+echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
 echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"$C""
 echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,CNVD-2017-02776"$C""
@@ -557,10 +557,10 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "ecli" || "$2" = "entynet-cli" ]]
+elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
 then
 cd ~
-if [[ -d ~/ecli ]]
+if [[ -d ~/ECLI ]]
 then
 sleep 0.5
 else
@@ -574,22 +574,22 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install ecli
+epkg install ECLI
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd ecli
+cd ECLI
 chmod +x uninstall.sh
 ./uninstall.sh
 cd ~
 sleep 0.5
 {
-git clone https://github.com/entynetproject/ecli.git
+git clone https://github.com/entynetproject/ECLI.git
 } &> /dev/null
-cd ecli
+cd ECLI
 chmod +x install.sh
 ./install.sh
 exit
@@ -1012,9 +1012,9 @@ elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
 then
 echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
 exit
-elif [[ "$2" = "ecli" || "$2" = "entynet-cli" ]]
+elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
 then
-echo -e ""$G"com.entynetproject.ecli"$C"/stable 4.0/"$R"ecli,entynet-cli"$C""
+echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
 exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
@@ -1109,10 +1109,10 @@ chmod +x uninstall.sh
 ./uninstall.sh
 exit
 
-elif [[ "$2" = "ecli" || "$2" = "entynet-cli" ]]
+elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
 then
 cd ~
-if [[ -d ~/ecli ]]
+if [[ -d ~/ECLI ]]
 then
 sleep 0.5
 else
@@ -1126,14 +1126,14 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install ecli
+epkg install ECLI
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd ecli
+cd ECLI
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
