@@ -45,7 +45,7 @@ echo
 echo -e ""$N" INFO: The Epath Packager (epkg)" 
 echo -e ""$N" is a packager for developers."$C""
 echo 
-echo  "Usage: epkg [OPTION...] <package...>"
+echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
 echo   "   install   <package>  Install selected package."
