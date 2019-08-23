@@ -68,7 +68,7 @@
 
 > epkg options
 
-    Usage: epkg [OPTION...] <package...>
+    Usage: epkg [OPTION...] <package>
     Copyright (C) 2019, Entynetproject. All Rights Reserved.
 
        install   <package>  Install selected package.
