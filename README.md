@@ -81,17 +81,17 @@
 
 # Epath packager examples
 
-> If you want to install package, run
+> Example of the installing package
 
-    epkg install <package>
+    epkg install ehtools
 
-> If you want to reinstall package, run
+> Example of the reinstalling package
      
-    epkg reinstall <package>
+    epkg reinstall ehtools
     
-> If you want to uninstall package, run
+> Example of the uninstalling package
     
-    epkg uninstall <package>
+    epkg uninstall ehtools
     
 # The epkg MIT license
 
