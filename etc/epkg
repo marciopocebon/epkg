@@ -92,6 +92,66 @@ chmod +x install.sh
 ./install.sh
 exit
 
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d ~/osfetch ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/osfetch.git
+} &> /dev/null
+cd osfetch
+sudo make install
+exit
+
+elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+then
+cd ~
+if [[ -d ~/osman ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg reinstall osman
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/osman.git
+} &> /dev/null
+cd osman
+sudo make install
+exit
+
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
@@ -498,6 +558,8 @@ if [[ "$1" = "pkg-list" ]]
 then
 sleep 1
 echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
+echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
+echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
 echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
 echo -e ""$G"com.entynetproject.GeoSpy"$C"/stable 2.0/"$R"GeoSpy,Geolocation-Spy"$C""
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
@@ -550,6 +612,76 @@ git clone https://github.com/entynetproject/copycat.git
 cd copycat
 chmod +x install.sh
 ./install.sh
+exit
+
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d ~/osfetch ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd osfetch
+sudo make uninstall
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/osfetch.git
+} &> /dev/null
+cd osfetch
+sudo make install
+exit
+
+elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+then
+cd ~
+if [[ -d ~/osman ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install osman
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd osman
+sudo make uninstall
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/osman.git
+} &> /dev/null
+cd osman
+sudo make install
 exit
 
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
@@ -1033,7 +1165,15 @@ fi
 
 if [[ "$1" = "search" ]]
 then
-if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+if [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
+exit
+elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+then
+echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
+exit
+elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
 exit
@@ -1151,6 +1291,62 @@ echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd copycat
 chmod +x uninstall.sh
 ./uninstall.sh
+exit
+
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d ~/osfetch ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd osfetch
+sudo make uninstall
+exit
+
+elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+then
+cd ~
+if [[ -d ~/osman ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" ]]
+then
+epkg install osman
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd osman
+sudo make uninstall
 exit
 
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
