@@ -519,40 +519,6 @@ cd ehtools
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
-then
-cd ~
-if [[ -d /root/ehtoolslite ]]
-then
-sleep 0.5
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
-sleep 0.5
-echo -n "Do you want to reinstall it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg reinstall ehtoolslite
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$O"install: "$C""$2""
-{
-git clone https://github.com/entynetproject/ehtoolslite.git
-} &> /dev/null
-cd ehtoolslite
-chmod +x install.sh
-./install.sh
-exit
-fi
-echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
-exit
-fi
 
 if [[ "$1" = "pkg-list" ]]
 then
@@ -572,7 +538,6 @@ echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arisspl
 echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
 echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
-echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
 exit
 fi
 if [[ "$1" = "reinstall" ]]
@@ -1122,42 +1087,6 @@ cd ehtools
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
-then
-cd ~
-if [[ -d /root/ehtoolslite ]]
-then
-sleep 0.5
-else
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
-sleep 0.5
-echo -n "Do you want to install it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg install ehtoolslite
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd /root/ehtoolslite
-chmod +x uninstall.sh
-./uninstall.sh
-cd ~
-sleep 0.5
-{
-git clone https://github.com/entynetproject/ehtoolslite.git
-} &> /dev/null
-cd ehtoolslite
-chmod +x install.sh
-./install.sh
-exit
 fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
@@ -1200,10 +1129,6 @@ exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
-exit
-elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
-then
-echo -e ""$G"com.entynetproject.ehtoolslite"$C"/stable 3.0.0/"$R"ehtoolslite,ehtoolslite-framework"$C""
 exit
 elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
 then
@@ -1666,34 +1591,6 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd /root/ehtools
-chmod +x uninstall.sh
-./uninstall.sh
-exit
-elif [[ "$2" = "ehtoolslite" || "$2" = "ehtoolslite-framework"  || "$2" = "ehtools-lite" ]]
-then
-cd ~
-if [[ -d /root/ehtools ]]
-then
-sleep 0.5
-else
-echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
-sleep 0.5
-echo -n "Do you want to install it? [Y/n]"
-read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
-then
-exit
-fi
-if [[ "$SAD" = "Y" ]]
-then
-epkg install ehtoolslite
-fi
-exit
-fi
-cd ~
-sleep 0.5
-echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd /root/ehtoolslite
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
