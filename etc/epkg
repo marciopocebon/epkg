@@ -519,6 +519,7 @@ cd ehtools
 chmod +x install.sh
 ./install.sh
 exit
+fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
 fi
@@ -1091,6 +1092,7 @@ cd ehtools
 chmod +x install.sh
 ./install.sh
 exit
+fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
 fi
@@ -1157,6 +1159,7 @@ elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
 then
 echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
 exit
+fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
 fi
@@ -1596,6 +1599,7 @@ cd /root/ehtools
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
+fi
 echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
 exit
 fi
