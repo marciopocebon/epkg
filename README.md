@@ -36,7 +36,7 @@
     Name      : Entynet Packager 
     Developer : Entynetproject
     Version   : v1.2 (epkg-v1.2-dev)
-    Packages  : 15 (Entynetproject Organization)
+    Packages  : Total 15 (epkg pkg-list)
     Site      : https://entynetproject.simplesite.com/
 
 # About entynet packager
