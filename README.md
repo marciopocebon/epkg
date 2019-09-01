@@ -1,11 +1,11 @@
-# Epath Packager (epkg)
+# Entynet Packager (epkg)
 
-       ___     _ __            _      _         ___                    _               __ _                  
-      | __|   | '_ \  __ _    | |_   | |_      | _ \  __ _     __     | |__   __ _    / _` |   ___      _ _  
-      | _|    | .__/ / _` |   |  _|  | ' \     |  _/ / _` |   / _|    | / /  / _` |   \__, |  / -_)    | '_| 
-      |___|   |_|__  \__,_|   _\__|  |_||_|   _|_|_  \__,_|   \__|_   |_\_\  \__,_|   |___/   \___|   _|_|_  
-    _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_| """ |_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
-    "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+       ___             _       _  _                    _                 ___                    _               __ _                  
+      | __|   _ _     | |_    | || |  _ _      ___    | |_      o O O   | _ \  __ _     __     | |__   __ _    / _` |   ___      _ _  
+      | _|   | ' \    |  _|    \_, | | ' \    / -_)   |  _|    o        |  _/ / _` |   / _|    | / /  / _` |   \__, |  / -_)    | '_| 
+      |___|  |_||_|   _\__|   _|__/  |_||_|   \___|   _\__|   TS__[O]  _|_|_  \__,_|   \__|_   |_\_\  \__,_|   |___/   \___|   _|_|_  
+    _|"""""|_|"""""|_|"""""|_| """"|_|"""""|_|"""""|_|"""""| {======|_| """ |_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+    "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
@@ -33,21 +33,21 @@
 
 # Epath packager credits
 
-    Name      : Epath Packager 
+    Name      : Entynet Packager 
     Developer : Entynetproject
     Version   : v1.2 (epkg-v1.2-dev)
-    Firmware  : Epath Firmware (ehtools path)
+    Packages  : 17 (Entynetproject)
     Site      : https://entynetproject.simplesite.com/
 
 # About epath packager
 
-    INFO: Epath Packager (epkg) is a packager 
+    INFO: Entynet Packager (epkg) is a packager 
     for developers with big functional and with most 
     useful options like install/reinstall/uninstall!
 
 # How to install epkg
 
-    INFO: Epath Packager will be installed to /bin and
+    INFO: Entynet Packager will be installed to /bin and
     /usr/local/bin as /bin/epkg and /usr/local/bin/epkg!
 
 > cd epkg
@@ -75,11 +75,11 @@
        reinstall <package>  Reinstall installed package.
        uninstall <package>  Uninstall installed package.
        search    <package>  Search for packages.
-       update               Update Epath Packager.
+       update               Update Entynet Packager.
        pkg-list             Show all available packages.
-       options              Show Epath Packager options.
+       options              Show Entynet Packager options.
 
-# Epath packager examples
+# Entynet packager examples
 
 > Example of the installing package
 
@@ -93,7 +93,7 @@
     
     epkg uninstall ehtools
     
-# The epkg MIT license
+# Epkg MIT license
 
     MIT License
 
