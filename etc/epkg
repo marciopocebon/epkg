@@ -42,7 +42,7 @@ fi
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
 echo
-echo -e ""$N" INFO: The Epath Packager (epkg)" 
+echo -e ""$N" INFO: The Entynet Packager (epkg)" 
 echo -e ""$N" is a packager for developers."$C""
 echo 
 echo  "Usage: epkg [OPTION...] <package>"
@@ -52,9 +52,9 @@ echo   "   install   <package>  Install selected package."
 echo   "   uninstall <package>  Uninstall installed package."
 echo   "   reinstall <package>  Reinstall installed package."
 echo   "   search    <package>  Search for packages."                   
-echo   "   update               Update Epath Packager."
+echo   "   update               Update Entynet Packager."
 echo   "   pkg-list             Show all available packages."
-echo   "   options              Show Epath Packager options."
+echo   "   options              Show Entynet Packager options."
 echo
 exit
 fi
@@ -339,7 +339,7 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
 if [[ -d ~/epkg ]]
@@ -519,11 +519,12 @@ cd ehtools
 chmod +x install.sh
 ./install.sh
 exit
+fi
 
 if [[ "$1" = "pkg-list" ]]
 then
 sleep 1
-echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
 echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
 echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
 echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
@@ -871,7 +872,7 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
 if [[ -d ~/epkg ]]
@@ -1130,9 +1131,9 @@ elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" 
 then
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
 exit
-elif [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
-echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,epath-packager"$C""
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
 exit
 elif [[ "$2" = "GeoSpy" || "$2" = "Geolocation-Spy" ]]
 then
@@ -1161,7 +1162,7 @@ fi
 
 if [[ "$1" = "uninstall" ]]
 then
-if [[ "$2" = "epkg" || "$2" = "epath-packager" ]]
+if [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
 if [[ -d ~/epkg ]]
