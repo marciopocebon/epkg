@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://github.com/entynetproject/ehtools">
-      <img src="https://img.shields.io/badge/firmware-epath-red.svg?maxAge=2592000">
+      <img src="https://img.shields.io/badge/packages-15-red.svg?maxAge=2592000">
  </a>
   <a href="https://github.com/entynetproject/epkg/issues?q=is%3Aissue+is%3Aclosed">
       <img src="https://img.shields.io/github/issues/entynetproject/epkg.svg">
@@ -31,15 +31,15 @@
  </a>
 </p>
 
-# Epath packager credits
+# Entynet packager credits
 
     Name      : Entynet Packager 
     Developer : Entynetproject
     Version   : v1.2 (epkg-v1.2-dev)
-    Packages  : 17 (Entynetproject)
+    Packages  : 15 (Entynetproject Organization)
     Site      : https://entynetproject.simplesite.com/
 
-# About epath packager
+# About entynet packager
 
     INFO: Entynet Packager (epkg) is a packager 
     for developers with big functional and with most 
