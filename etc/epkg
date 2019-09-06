@@ -369,7 +369,7 @@ cd epkg
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
 if [[ -d ~/entropy ]]
@@ -489,7 +489,7 @@ cd arissploit
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
 then
 cd ~
 if [[ -d /root/ehtools ]]
@@ -534,7 +534,7 @@ echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
 echo -e ""$G"com.entynetproject.GeoSpy"$C"/stable 2.0/"$R"GeoSpy,Geolocation-Spy"$C""
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
 echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"$C""
-echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,CNVD-2017-02776"$C""
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
 echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C""
 echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
 echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
@@ -912,7 +912,7 @@ cd epkg
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
 if [[ -d ~/entropy ]]
@@ -1056,7 +1056,7 @@ cd arissploit
 chmod +x install.sh
 ./install.sh
 exit
-elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
 then
 cd ~
 if [[ -d /root/ehtools ]]
@@ -1117,7 +1117,7 @@ echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"
 exit
 elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
 then
-echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,CNVD-2017-02776"$C""
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtsh" ]]
 then
@@ -1453,7 +1453,7 @@ chmod +x uninstall.sh
 ./uninstall.sh
 exit
 
-elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
 if [[ -d ~/entropy ]]
@@ -1571,7 +1571,7 @@ cd arissploit
 chmod +x uninstall.sh
 ./uninstall.sh
 exit
-elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
 then
 cd ~
 if [[ -d /root/ehtools ]]
