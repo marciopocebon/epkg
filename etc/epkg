@@ -691,10 +691,10 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -d ~/ECLI ]]
+if [[ -d ~/camsnap ]]
 then
 sleep 0.5
 else
@@ -708,30 +708,30 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install ECLI
+epkg install camsnap
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd ECLI
+cd camsnap
 chmod +x uninstall.sh
 ./uninstall.sh
 cd ~
 sleep 0.5
 {
-git clone https://github.com/entynetproject/ECLI.git
+git clone https://github.com/entynetproject/camsnap.git
 } &> /dev/null
-cd ECLI
+cd camsnap
 chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "GeoSpy" || "$2" = "Geolocation-Spy" ]]
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -d ~/GeoSpy ]]
+if [[ -d ~/geospy ]]
 then
 sleep 0.5
 else
@@ -745,22 +745,22 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install GeoSpy
+epkg install geospy
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd GeoSpy
+cd geospy
 chmod +x uninstall.sh
 ./uninstall.sh
 cd ~
 sleep 0.5
 {
-git clone https://github.com/entynetproject/GeoSpy.git
+git clone https://github.com/entynetproject/geospy.git
 } &> /dev/null
-cd GeoSpy
+cd geospy
 chmod +x install.sh
 ./install.sh
 exit
