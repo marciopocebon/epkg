@@ -183,10 +183,10 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "ECLI" || "$2" = "Entynet-CLI" ]]
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -d ~/ECLI ]]
+if [[ -d ~/camsnap ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -199,7 +199,7 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg reinstall ECLI
+epkg reinstall camsnap
 fi
 exit
 fi
@@ -207,9 +207,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/ECLI.git
+git clone https://github.com/entynetproject/camsnap.git
 } &> /dev/null
-cd ECLI
+cd camsnap
 chmod +x install.sh
 ./install.sh
 exit
@@ -245,10 +245,10 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "GeoSpy" || "$2" = "Geolocation-Spy" ]]
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -d ~/GeoSpy ]]
+if [[ -d ~/geospy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -261,7 +261,7 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg reinstall GeoSpy
+epkg reinstall geospy
 fi
 exit
 fi
@@ -269,9 +269,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/GeoSpy.git
+git clone https://github.com/entynetproject/geospy.git
 } &> /dev/null
-cd GeoSpy
+cd geospy
 chmod +x install.sh
 ./install.sh
 exit
@@ -530,8 +530,8 @@ sleep 1
 echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
 echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
 echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
-echo -e ""$G"com.entynetproject.ECLI"$C"/stable 4.0/"$R"ECLI,Entynet-CLI"$C""
-echo -e ""$G"com.entynetproject.GeoSpy"$C"/stable 2.0/"$R"GeoSpy,Geolocation-Spy"$C""
+echo -e ""$G"com.entynetproject.camsnap"$C"/stable 1.0/"$R"camsnap,camera-snapshot"$C""
+echo -e ""$G"com.entynetproject.geospy"$C"/stable 2.0/"$R"geospy,geolocation-spy"$C""
 echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
 echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"$C""
 echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
