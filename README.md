@@ -43,7 +43,8 @@
 
     INFO: Entynet Packager (epkg) is a packager 
     for developers with big functional and with most 
-    useful options like install/reinstall/uninstall!
+    useful options like package installation, package 
+    reinstallation and package uninstallation.
 
 # How to install epkg
 
