@@ -122,10 +122,10 @@ cd osfetch
 sudo make install
 exit
 
-elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+elif [[ "$2" = "socfish" || "$2" = "os-manager" ]]
 then
 cd ~
-if [[ -d ~/osman ]]
+if [[ -d ~/socfish ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -138,7 +138,7 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg reinstall osman
+epkg reinstall socfish
 fi
 exit
 fi
@@ -146,9 +146,9 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
-git clone https://github.com/entynetproject/osman.git
+git clone https://github.com/entynetproject/socfish.git
 } &> /dev/null
-cd osman
+cd socfish
 sudo make install
 exit
 
@@ -528,7 +528,7 @@ if [[ "$1" = "pkg-list" ]]
 then
 sleep 1
 echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
-echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
+echo -e ""$G"com.entynetproject.socfish"$C"/stable 1.8/"$R"socfish,os-manager"$C""
 echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
 echo -e ""$G"com.entynetproject.camsnap"$C"/stable 1.0/"$R"camsnap,camera-snapshot"$C""
 echo -e ""$G"com.entynetproject.geospy"$C"/stable 2.0/"$R"geospy,geolocation-spy"$C""
@@ -619,10 +619,10 @@ cd osfetch
 sudo make install
 exit
 
-elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+elif [[ "$2" = "socfish" || "$2" = "os-manager" ]]
 then
 cd ~
-if [[ -d ~/osman ]]
+if [[ -d ~/socfish ]]
 then
 sleep 0.5
 else
@@ -636,21 +636,21 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install osman
+epkg install socfish
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
-cd osman
+cd socfish
 sudo make uninstall
 cd ~
 sleep 0.5
 {
-git clone https://github.com/entynetproject/osman.git
+git clone https://github.com/entynetproject/socfish.git
 } &> /dev/null
-cd osman
+cd socfish
 sudo make install
 exit
 
@@ -1103,9 +1103,9 @@ if [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
 exit
-elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+elif [[ "$2" = "socfish" || "$2" = "os-manager" ]]
 then
-echo -e ""$G"com.entynetproject.osman"$C"/stable 1.4.3/"$R"osman,os-manager"$C""
+echo -e ""$G"com.entynetproject.socfish"$C"/stable 1.8/"$R"socfish,os-manager"$C""
 exit
 elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
@@ -1251,10 +1251,10 @@ cd osfetch
 sudo make uninstall
 exit
 
-elif [[ "$2" = "osman" || "$2" = "os-manager" ]]
+elif [[ "$2" = "socfish" || "$2" = "os-manager" ]]
 then
 cd ~
-if [[ -d ~/osman ]]
+if [[ -d ~/socfish ]]
 then
 sleep 0.5
 else
@@ -1268,14 +1268,14 @@ exit
 fi
 if [[ "$SAD" = "Y" ]]
 then
-epkg install osman
+epkg install socfish
 fi
 exit
 fi
 cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
-cd osman
+cd socfish
 sudo make uninstall
 exit
 
