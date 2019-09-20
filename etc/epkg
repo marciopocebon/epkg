@@ -41,6 +41,7 @@ fi
 
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
+echo
 cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
@@ -1626,6 +1627,7 @@ sleep 1
 exit
 fi
 
+echo
 cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
