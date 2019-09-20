@@ -41,6 +41,8 @@ fi
 
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
+cat banner/banner.txt
+echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
@@ -1624,4 +1626,16 @@ sleep 1
 exit
 fi
 
-echo -e ""$N"epkg: "$R"error: "$C"need an action option"
+cat banner/banner.txt
+echo
+echo  "Usage: epkg [OPTION...] <package>"
+echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
+echo 
+echo   "   install   <package>  Install selected package."
+echo   "   uninstall <package>  Uninstall installed package."
+echo   "   reinstall <package>  Reinstall installed package."
+echo   "   search    <package>  Search for packages."                   
+echo   "   update               Update Entynet Packager."
+echo   "   pkg-list             Show all available packages."
+echo   "   options              Show Entynet Packager options."
+exit
