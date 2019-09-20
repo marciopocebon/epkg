@@ -42,6 +42,8 @@ fi
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
 echo
+cd 
+cd epkg
 cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
@@ -54,6 +56,7 @@ echo   "   search    <package>  Search for packages."
 echo   "   update               Update Entynet Packager."
 echo   "   pkg-list             Show all available packages."
 echo   "   options              Show Entynet Packager options."
+echo
 exit
 fi
 
@@ -1628,6 +1631,8 @@ exit
 fi
 
 echo
+cd
+cd epkg
 cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
@@ -1640,4 +1645,5 @@ echo   "   search    <package>  Search for packages."
 echo   "   update               Update Entynet Packager."
 echo   "   pkg-list             Show all available packages."
 echo   "   options              Show Entynet Packager options."
+echo
 exit
