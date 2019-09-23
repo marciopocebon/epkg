@@ -72,11 +72,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall copycat
 fi
@@ -103,11 +103,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall osfetch
 fi
@@ -133,11 +133,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall socfish
 fi
@@ -164,11 +164,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall phonia
 fi
@@ -195,11 +195,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall camsnap
 fi
@@ -226,11 +226,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall invader
 fi
@@ -257,11 +257,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall geospy
 fi
@@ -288,11 +288,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall entypreter
 fi
@@ -320,11 +320,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall mouse
 fi
@@ -351,11 +351,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall epkg
 fi
@@ -381,11 +381,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall entropy
 fi
@@ -411,11 +411,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall ehtsh
 fi
@@ -441,11 +441,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall honey
 fi
@@ -471,11 +471,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall arissploit
 fi
@@ -501,11 +501,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
 sleep 0.5
 echo -n "Do you want to reinstall it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg reinstall ehtools
 fi
@@ -560,11 +560,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install copycat
 fi
@@ -597,11 +597,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install osfetch
 fi
@@ -632,11 +632,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install socfish
 fi
@@ -669,11 +669,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install phonia
 fi
@@ -706,11 +706,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install camsnap
 fi
@@ -743,11 +743,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install geospy
 fi
@@ -780,11 +780,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install invader
 fi
@@ -817,11 +817,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install entypreter
 fi
@@ -854,11 +854,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install mouse
 fi
@@ -891,11 +891,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install epkg
 fi
@@ -927,11 +927,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install entropy
 fi
@@ -963,11 +963,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install ehtsh
 fi
@@ -999,11 +999,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install honey
 fi
@@ -1035,11 +1035,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install arissploit
 fi
@@ -1071,11 +1071,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install ehtools
 fi
@@ -1181,11 +1181,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install epkg
 fi
@@ -1209,11 +1209,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install copycat
 fi
@@ -1238,11 +1238,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install osfetch
 fi
@@ -1266,11 +1266,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install socfish
 fi
@@ -1295,11 +1295,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install phonia
 fi
@@ -1324,11 +1324,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install camsnap
 fi
@@ -1353,11 +1353,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install geospy
 fi
@@ -1382,11 +1382,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install invader
 fi
@@ -1411,11 +1411,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install entypreter
 fi
@@ -1440,11 +1440,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install mouse
 fi
@@ -1469,11 +1469,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install entropy
 fi
@@ -1499,11 +1499,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install ehtsh
 fi
@@ -1529,11 +1529,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install honey
 fi
@@ -1559,11 +1559,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install arissploit
 fi
@@ -1587,11 +1587,11 @@ echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
 sleep 0.5
 echo -n "Do you want to install it? [Y/n]"
 read -p $' ' SAD
-if [[ "$SAD" = "n" ]]
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
 then
 exit
 fi
-if [[ "$SAD" = "Y" ]]
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
 then
 epkg install ehtools
 fi
