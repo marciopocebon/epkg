@@ -14,7 +14,7 @@
   <a href="https://github.com/entynetproject/epkg/releases">
     <img src="https://img.shields.io/github/release/entynetproject/epkg.svg">
   </a>
-  <a href="https://ru.m.wikipedia.org/wiki/сценарий_командной_строки">
+  <a href="https://wikipedia.org/wiki/Shell_script">
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://github.com/entynetproject/ehtools">
@@ -26,7 +26,7 @@
   <a href="https://github.com/entynetproject/epkg/wiki">
       <img src="https://img.shields.io/badge/wiki%20-epkg-lightgrey.svg">
  </a>
-  <a href="https://mobile.twitter.com/entynetproject">
+  <a href="https://twitter.com/entynetproject">
     <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
  </a>
 </p>
