@@ -31,14 +31,6 @@
  </a>
 </p>
 
-# Entynet packager details
-
-    Name      : Entynet Packager 
-    Developer : Entynetproject
-    Version   : v1.2 (epkg-v1.2-dev)
-    Packages  : Total 15 (com.entynetproject.*)
-    Site      : https://entynetproject.simplesite.com/
-
 # About entynet packager
 
     INFO: Entynet Packager (epkg) is a packager that contains all 
@@ -78,7 +70,6 @@
        search    <package>  Search for the packages.
        update               Update Entynet Packager.
        pkg-list             Show all available packages.
-       details              Show Entynet Packager details.
        options              Show Entynet Packager options.
 
 # Entynet packager examples
