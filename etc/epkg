@@ -69,24 +69,8 @@ echo   "   reinstall <package>  Reinstall installed package."
 echo   "   search    <package>  Search for the packages."                   
 echo   "   update               Update Entynet Packager."
 echo   "   pkg-list             Show all available packages."
-echo   "   details              Show Entynet Packager details."
 echo   "   options              Show Entynet Packager options."
 echo
-exit
-fi
-
-if [[ "$1" = "details" ]]
-then
-sleep 1
-echo
-cat ~/epkg/banner/banner.txt
-echo """
-   Name      : Entynet Packager 
-   Developer : Entynetproject
-   Version   : v1.2 (epkg-v1.2-dev)
-   Packages  : Total 15 (com.entynetproject.*)
-   Site      : https://entynetproject.simplesite.com/
-"""
 exit
 fi
 
@@ -1677,7 +1661,6 @@ echo   "   reinstall <package>  Reinstall installed package."
 echo   "   search    <package>  Search for the packages."                   
 echo   "   update               Update Entynet Packager."
 echo   "   pkg-list             Show all available packages."
-echo   "   details              Show Entynet Packager details."
 echo   "   options              Show Entynet Packager options."
 echo
 exit
