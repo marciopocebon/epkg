@@ -32,6 +32,15 @@
 
 printf '\033]2;Entynet Packager\a'
 
+WHO="$( whoami )"
+
+if [[ "$WHO" != "root" ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
+exit
+fi
+
 if [[ -d ~/epkg ]]
 then
 sleep 0
@@ -43,14 +52,6 @@ cd ~/epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
-
-WHO="$( whoami )"
-
-if [[ "$WHO" != "root" ]]
-then
-sleep 0.5
-echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
-exit
 fi
 
 if [[ "$1" = "options" || "$1" = "help" ]]
