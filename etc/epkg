@@ -315,7 +315,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -d ~/mouse ]]
+if [[ -f /usr/local/bin/mouse ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -848,7 +848,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -d ~/mouse ]]
+if [[ -f /usr/local/bin/mouse ]]
 then
 sleep 0.5
 else
@@ -1434,7 +1434,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -d ~/mouse ]]
+if [[ -f /usr/local/bin/mouse ]]
 then
 sleep 0.5
 else
