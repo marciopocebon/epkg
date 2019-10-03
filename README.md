@@ -31,7 +31,7 @@
  </a>
 </p>
 
-# Entynet packager credits
+# Entynet packager details
 
     Name      : Entynet Packager 
     Developer : Entynetproject
