@@ -75,9 +75,10 @@
        install   <package>  Install selected package.
        reinstall <package>  Reinstall installed package.
        uninstall <package>  Uninstall installed package.
-       search    <package>  Search for packages.
+       search    <package>  Search for the package.
        update               Update Entynet Packager.
        pkg-list             Show all available packages.
+       details              Show Entynet Packager details.
        options              Show Entynet Packager options.
 
 # Entynet packager examples
