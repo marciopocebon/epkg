@@ -36,7 +36,7 @@
     Name      : Entynet Packager 
     Developer : Entynetproject
     Version   : v1.2 (epkg-v1.2-dev)
-    Packages  : Total 15 (epkg pkg-list)
+    Packages  : Total 15 (com.entynetproject.*)
     Site      : https://entynetproject.simplesite.com/
 
 # About entynet packager
@@ -75,7 +75,7 @@
        install   <package>  Install selected package.
        reinstall <package>  Reinstall installed package.
        uninstall <package>  Uninstall installed package.
-       search    <package>  Search for the package.
+       search    <package>  Search for the packages.
        update               Update Entynet Packager.
        pkg-list             Show all available packages.
        details              Show Entynet Packager details.
