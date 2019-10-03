@@ -47,39 +47,31 @@ DIR="$( pwd )"
 if [[ -d ~/epkg ]]
 then
 sleep 0.5
-sleep 0.5
 else
 cd ~
-sleep 1
-sleep 1
+sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
 cd epkg
 chmod +x install.sh
 fi
-sleep 1
-sleep 0.5
 {
 mkdir /etc/epkg
 cp ~/epkg/etc/epkg /etc/epkg
 mkdir /etc/epkg/epkg.cfg.d
 } &> /dev/null
 sleep 0.5
-sleep 0.5
 {
 cp ~/epkg/bin/epkg /bin
 } &> /dev/null
 sleep 0.5
-sleep 0.5
 {
 cp ~/epkg/bin/epkg /usr/local/bin
 } &> /dev/null
-sleep 0.5
 sleep 0.5
 {
 chmod +x /etc/epkg/epkg
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
 } &> /dev/null
-sleep 1
