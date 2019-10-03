@@ -1650,9 +1650,7 @@ exit
 fi
 
 echo
-cd
-cd epkg
-cat banner/banner.txt
+cat ~/epkg/banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
