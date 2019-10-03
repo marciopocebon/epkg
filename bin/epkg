@@ -22,4 +22,58 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-/etc/epkg/epkg $1 $2 $3 $4 $5
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+#blue start 
+	BS="-e \033[34m"
+#color end
+	CE="\033[0m"
+#red start
+	RS="-e \033[31m"
+#green start
+	GNS="-e \033[32m"
+else
+#blue start 
+	BS="-e \e[0;34m"
+#color end
+	CE="\e[0m"
+#red start
+	RS="-e \e[0;31m"
+#green start
+	GNS="-e \e[0;32m"
+fi
+
+printf '\033]2;Entynet Packager\a'
+
+cd /etc
+if [[ -d /etc/epkg ]]
+then
+{
+cd /etc/epkg
+} &> /dev/null
+chmod +x epkg
+./epkg $1 $2 $3 $4 $5 $6 $7 $8 $9
+else
+{
+ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" != "" ]]
+then 
+cd ~
+{
+git clone https://github.com/entynetproject/epkg.git
+cd ~/epkg
+rm /bin/epkg
+rm /usr/local/bin/epkg
+chmod +x install.sh
+./install.sh
+cd /etc/epkg
+} &> /dev/null
+chmod +x epkg
+./epkg $1 $2 $3 $4 $5 $6 $7 $8 $9
+else
+cd ~
+sleep 1
+exit
+fi
+fi
