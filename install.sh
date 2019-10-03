@@ -42,7 +42,6 @@ exit
 fi
 
 cd ~
-DIR="$( pwd )"
 
 if [[ -d ~/epkg ]]
 then
