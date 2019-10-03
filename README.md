@@ -41,10 +41,10 @@
 
 # About entynet packager
 
-    INFO: Entynet Packager (epkg) is a packager containing 
-    all Entynetproject Organization projects and installation 
-    rules for them. Entynet Packager is intended to help user 
-    to properly install Entynetproject Organization projects.
+    INFO: Entynet Packager (epkg) is a packager that contains all 
+    Entynetproject Organization projects and installation rules for 
+    them. Entynet Packager is intended to help the user properly 
+    install Entynetproject Organization projects.
 
 # How to install epkg
 
