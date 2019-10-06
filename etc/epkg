@@ -554,7 +554,7 @@ echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-explo
 echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C""
 echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
 echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
-echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 3.1/"$R"arissploit,arissploit-framework"$C""
 echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
 echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
 echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
@@ -1147,7 +1147,7 @@ echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$
 exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework" ]]
 then
-echo -e ""$G"com.entynetproject.arissploit"$C"/stable 1.0/"$R"arissploit,arissploit-framework"$C""
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 3.1/"$R"arissploit,arissploit-framework"$C""
 exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
 then
