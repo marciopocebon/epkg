@@ -45,10 +45,10 @@ if [[ -d /etc/epkg ]]
 then
 sleep 0
 else
-cd ~
+cd /etc
 {
 git clone https://github.com/entynetproject/epkg.git
-cd ~/epkg
+cd /etc/epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
@@ -58,7 +58,7 @@ if [[ "$1" = "options" || "$1" = "help" ]]
 then
 sleep 1
 echo
-cat ~/epkg/banner/banner.txt
+cat /etc/epkg/banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
@@ -1667,16 +1667,16 @@ cd /etc
 sleep 1
 echo -e ""$BS"Installing update..."$C""
 {
-cd
+cd /etc
 cd epkg
 chmod +x uninstall.sh
 ./uninstall.sh
-cd
+cd /etc
 sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
-cd epkg
+cd /etc/epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
@@ -1688,7 +1688,7 @@ fi
 
 sleep 1
 echo
-cat ~/epkg/banner/banner.txt
+cat /etc/epkg/banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
