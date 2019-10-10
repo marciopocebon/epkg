@@ -43,14 +43,12 @@ fi
 
 if [[ -d /etc/epkg ]]
 then
-sleep 0
+cd /etc/epkg
 else
 cd /etc
 {
 git clone https://github.com/entynetproject/epkg.git
 cd /etc/epkg
-chmod +x install.sh
-./install.sh
 } &> /dev/null
 fi
 
