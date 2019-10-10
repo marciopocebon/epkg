@@ -110,9 +110,9 @@ then
 cd ~
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-INI = "/usr/local/bin"
+INI="/usr/local/bin"
 else
-INI = "/bin"
+INI="/bin"
 fi
 if [[ -d "$INI"/osfetch ]]
 then
@@ -614,9 +614,9 @@ then
 cd ~
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-INI = "/usr/local/bin"
+INI="/usr/local/bin"
 else
-INI = "/bin"
+INI="/bin"
 fi
 if [[ -d "$INI"/osfetch ]]
 then
@@ -1271,9 +1271,9 @@ then
 cd ~
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-INI = "/usr/local/bin"
+INI="/usr/local/bin"
 else
-INI = "/bin"
+INI="/bin"
 fi
 if [[ -d "$INI"/osfetch ]]
 then
