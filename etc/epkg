@@ -41,7 +41,7 @@ echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
 exit
 fi
 
-if [[ -d ~/epkg ]]
+if [[ -d /etc/epkg ]]
 then
 sleep 0
 else
@@ -79,7 +79,7 @@ then
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
-if [[ -d ~/copycat ]]
+if [[ -d /usr/local/bin/copycat ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -110,7 +110,7 @@ exit
 elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 cd ~
-if [[ -d ~/osfetch ]]
+if [[ -d /usr/local/bin/osfetch ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -140,7 +140,7 @@ exit
 elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
 then
 cd ~
-if [[ -d ~/socfish ]]
+if [[ -d /usr/local/bin/socfish ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -171,7 +171,7 @@ exit
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
-if [[ -d ~/phonia ]]
+if [[ -d /usr/local/bin/phonia ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -202,7 +202,7 @@ exit
 elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -d ~/camsnap ]]
+if [[ -d /usr/local/bin/camsnap ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -233,7 +233,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d /usr/local/bin/invader ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -264,7 +264,7 @@ exit
 elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -d ~/geospy ]]
+if [[ -d /usr/local/bin/geospy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -295,7 +295,7 @@ exit
 elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
 then
 cd ~
-if [[ -d ~/entypreter ]]
+if [[ -d /usr/local/bin/entypreter ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -358,7 +358,7 @@ exit
 elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
-if [[ -d ~/epkg ]]
+if [[ -d /usr/local/bin/epkg ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -388,7 +388,7 @@ exit
 elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
-if [[ -d ~/entropy ]]
+if [[ -d /usr/local/bin/entropy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -418,7 +418,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd /etc
-if [[ -d /etc/ehtsh ]]
+if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -448,7 +448,7 @@ exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
 cd ~
-if [[ -d ~/honey ]]
+if [[ -d /usr/local/bin/honey ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -478,7 +478,7 @@ exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
 cd ~
-if [[ -d ~/arissploit ]]
+if [[ -d /usr/local/bin/arissploit ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -566,7 +566,7 @@ then
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
-if [[ -d ~/copycat ]]
+if [[ -d /usr/local/bin/copycat ]]
 then
 sleep 0.5
 else
@@ -603,7 +603,7 @@ exit
 elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 cd ~
-if [[ -d ~/osfetch ]]
+if [[ -d /usr/local/bin/osfetch ]]
 then
 sleep 0.5
 else
@@ -638,7 +638,7 @@ exit
 elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
 then
 cd ~
-if [[ -d ~/socfish ]]
+if [[ -d /usr/local/bin/socfish ]]
 then
 sleep 0.5
 else
@@ -675,7 +675,7 @@ exit
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
-if [[ -d ~/phonia ]]
+if [[ -d /usr/local/bin/phonia ]]
 then
 sleep 0.5
 else
@@ -712,7 +712,7 @@ exit
 elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -d ~/camsnap ]]
+if [[ -d /usr/local/bin/camsnap ]]
 then
 sleep 0.5
 else
@@ -749,7 +749,7 @@ exit
 elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -d ~/geospy ]]
+if [[ -d /usr/local/bin/geospy ]]
 then
 sleep 0.5
 else
@@ -786,7 +786,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d /usr/local/bin/invader ]]
 then
 sleep 0.5
 else
@@ -823,7 +823,7 @@ exit
 elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
 then
 cd ~
-if [[ -d ~/entypreter ]]
+if [[ -d /usr/local/bin/entypreter ]]
 then
 sleep 0.5
 else
@@ -897,7 +897,7 @@ exit
 elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
-if [[ -d ~/epkg ]]
+if [[ -d /usr/local/bin/epkg ]]
 then
 sleep 0.5
 else
@@ -933,7 +933,7 @@ exit
 elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
-if [[ -d ~/entropy ]]
+if [[ -d /usr/local/bin/entropy ]]
 then
 sleep 0.5
 else
@@ -969,7 +969,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd /etc
-if [[ -d /etc/ehtsh ]]
+if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
 else
@@ -1005,7 +1005,7 @@ exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
 cd ~
-if [[ -d ~/honey ]]
+if [[ -d /usr/local/bin/honey ]]
 then
 sleep 0.5
 else
@@ -1041,7 +1041,7 @@ exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
 cd ~
-if [[ -d ~/arissploit ]]
+if [[ -d /usr/local/bin/arissploit ]]
 then
 sleep 0.5
 else
@@ -1187,7 +1187,7 @@ then
 if [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
-if [[ -d ~/epkg ]]
+if [[ -d /usr/local/bin/epkg ]]
 then
 sleep 0.5
 else
@@ -1215,7 +1215,7 @@ exit
 elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
-if [[ -d ~/copycat ]]
+if [[ -d /usr/local/bin/copycat ]]
 then
 sleep 0.5
 else
@@ -1244,7 +1244,7 @@ exit
 elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 cd ~
-if [[ -d ~/osfetch ]]
+if [[ -d /usr/local/bin/osfetch ]]
 then
 sleep 0.5
 else
@@ -1272,7 +1272,7 @@ exit
 elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
 then
 cd ~
-if [[ -d ~/socfish ]]
+if [[ -d /usr/local/bin/socfish ]]
 then
 sleep 0.5
 else
@@ -1301,7 +1301,7 @@ exit
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
-if [[ -d ~/phonia ]]
+if [[ -d /usr/local/bin/phonia ]]
 then
 sleep 0.5
 else
@@ -1330,7 +1330,7 @@ exit
 elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -d ~/camsnap ]]
+if [[ -d /usr/local/bin/camsnap ]]
 then
 sleep 0.5
 else
@@ -1359,7 +1359,7 @@ exit
 elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -d ~/geospy ]]
+if [[ -d /usr/local/bin/geospy ]]
 then
 sleep 0.5
 else
@@ -1388,7 +1388,7 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -d ~/invader ]]
+if [[ -d /usr/local/bin/invader ]]
 then
 sleep 0.5
 else
@@ -1417,7 +1417,7 @@ exit
 elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
 then
 cd ~
-if [[ -d ~/entypreter ]]
+if [[ -d /usr/local/bin/entypreter ]]
 then
 sleep 0.5
 else
@@ -1475,7 +1475,7 @@ exit
 elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
-if [[ -d ~/entropy ]]
+if [[ -d /usr/local/bin/entropy ]]
 then
 sleep 0.5
 else
@@ -1505,7 +1505,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd /etc
-if [[ -d /etc/ehtsh ]]
+if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
 else
@@ -1535,7 +1535,7 @@ exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
 cd ~
-if [[ -d ~/honey ]]
+if [[ -d /usr/local/bin/honey ]]
 then
 sleep 0.5
 else
@@ -1565,7 +1565,7 @@ exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
 cd ~
-if [[ -d ~/arissploit ]]
+if [[ -d /usr/local/bin/arissploit ]]
 then
 sleep 0.5
 else
