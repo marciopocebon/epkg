@@ -41,19 +41,8 @@ sleep 1
 exit
 fi
 
-sleep 0.5
 {
 rm -r /etc/epkg
-} &> /dev/null
-sleep 0.5
-{
-rm /usr/local/bin/epkg
-} &> /dev/null
-sleep 0.5
-{
 rm /bin/epkg
-} &> /dev/null
-sleep 0.5
-{
-rm -r ~/epkg
+rm /usr/local/bin/epkg
 } &> /dev/null
