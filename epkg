@@ -1,0 +1,1704 @@
+#!/bin/bash
+
+# MIT License
+
+# Copyright (C) 2019, Entynetproject. All Rights Reserved.
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+        R="\033[1;31m" # Red
+        N="\033[1;37m" # White
+        G="\033[32m" # Green
+        O="\033[1;93m" # Orange
+        B="\033[1;34m" #Blue
+        C="\033[0m" #End
+        BS="\033[34m" #Blue
+
+printf '\033]2;Entynet Packager\a'
+
+WHO="$( whoami )"
+
+if [[ "$WHO" != "root" ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
+exit
+fi
+
+if [[ -d /etc/epkg ]]
+then
+sleep 0
+else
+cd /etc
+{
+git clone https://github.com/entynetproject/epkg.git
+cd /etc/epkg
+chmod +x install.sh
+./install.sh
+} &> /dev/null
+fi
+
+if [[ "$1" = "options" || "$1" = "help" ]]
+then
+sleep 1
+echo
+cat /etc/epkg/banner/banner.txt
+echo
+echo  "Usage: epkg [OPTION...] <package>"
+echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
+echo 
+echo   "   install   <package>  Install selected package."
+echo   "   uninstall <package>  Uninstall installed package."
+echo   "   reinstall <package>  Reinstall installed package."
+echo   "   search    <package>  Search for the packages."                   
+echo   "   update               Update Entynet Packager."
+echo   "   pkg-list             Show all available packages."
+echo   "   options              Show Entynet Packager options."
+echo
+exit
+fi
+
+if [[ "$1" = "install" ]]
+then
+if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/copycat ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/copycat.git
+} &> /dev/null
+cd copycat
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+INI = "/usr/local/bin"
+else
+INI = "/bin"
+fi
+if [[ -d "$INI"/osfetch ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/osfetch.git
+} &> /dev/null
+cd osfetch
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local install
+else
+make install
+fi
+exit
+
+elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/socfish ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall socfish
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/socfish.git
+} &> /dev/null
+cd socfish
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/phonia ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall phonia
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/phonia.git
+} &> /dev/null
+cd phonia
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/camsnap ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall camsnap
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/camsnap.git
+} &> /dev/null
+cd camsnap
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/invader ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall invader
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/invader.git
+} &> /dev/null
+cd invader/setup
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/geospy ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall geospy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/geospy.git
+} &> /dev/null
+cd geospy
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entypreter ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/entypreter.git
+} &> /dev/null
+cd entypreter
+chmod +x install.sh
+./install.sh
+exit
+
+
+elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+then
+cd ~
+if [[ -f /usr/local/bin/mouse ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall mouse
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/mouse.git
+} &> /dev/null
+cd mouse
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/epkg ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entropy ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/entropy.git
+} &> /dev/null
+cd entropy
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/ehtsh ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtsh.git
+} &> /dev/null
+cd ehtsh
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/honey ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/honey.git
+} &> /dev/null
+cd honey
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d /usr/local/bin/arissploit ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/arissploit.git
+} &> /dev/null
+cd arissploit
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
+sleep 0.5
+echo -n "Do you want to reinstall it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg reinstall ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$O"install: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtools.git
+} &> /dev/null
+cd ehtools
+chmod +x install.sh
+./install.sh
+exit
+fi
+echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
+fi
+
+if [[ "$1" = "pkg-list" ]]
+then
+sleep 1
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
+echo -e ""$G"com.entynetproject.socfish"$C"/stable 1.8/"$R"socfish,social-fisher"$C""
+echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
+echo -e ""$G"com.entynetproject.camsnap"$C"/stable 1.0/"$R"camsnap,camera-snapshot"$C""
+echo -e ""$G"com.entynetproject.geospy"$C"/stable 2.0/"$R"geospy,geolocation-spy"$C""
+echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
+echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"$C""
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
+echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C""
+echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
+echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 3.1/"$R"arissploit,arissploit-framework"$C""
+echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
+echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
+echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
+exit
+fi
+
+if [[ "$1" = "reinstall" ]]
+then
+if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/copycat ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd copycat
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/copycat.git
+} &> /dev/null
+cd copycat
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+INI = "/usr/local/bin"
+else
+INI = "/bin"
+fi
+if [[ -d "$INI"/osfetch ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd osfetch
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local uninstall
+else
+make uninstall
+fi
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/osfetch.git
+} &> /dev/null
+cd osfetch
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local install
+else
+make install
+fi
+exit
+
+elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/socfish ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install socfish
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd socfish
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/socfish.git
+} &> /dev/null
+cd socfish
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/phonia ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install phonia
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd phonia
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/phonia.git
+} &> /dev/null
+cd phonia
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/camsnap ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install camsnap
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd camsnap
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/camsnap.git
+} &> /dev/null
+cd camsnap
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/geospy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install geospy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd geospy
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/geospy.git
+} &> /dev/null
+cd geospy
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/invader ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install invader
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd invader/setup
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/invader.git
+} &> /dev/null
+cd invader/setup
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entypreter ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd entypreter
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/entypreter.git
+} &> /dev/null
+cd entypreter
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+then
+cd ~
+if [[ -f /usr/local/bin/mouse ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install mouse
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd mouse
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/mouse.git
+} &> /dev/null
+cd mouse
+chmod +x install.sh
+./install.sh
+exit
+
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/epkg ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd epkg
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entropy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd entropy
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/entropy.git
+} &> /dev/null
+cd entropy
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/ehtsh ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd ehtsh
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+{
+git clone https://github.com/entynetproject/ehtsh.git
+} &> /dev/null
+cd ehtsh
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/honey ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+cd honey
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+{
+git clone https://github.com/entynetproject/honey.git
+} &> /dev/null
+cd honey
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d /usr/local/bin/arissploit ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd arissploit
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/arissploit.git
+} &> /dev/null
+cd arissploit
+chmod +x install.sh
+./install.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
+cd /root/ehtools
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+{
+git clone https://github.com/entynetproject/ehtools.git
+} &> /dev/null
+cd ehtools
+chmod +x install.sh
+./install.sh
+exit
+fi
+echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
+fi
+
+if [[ "$1" = "search" ]]
+then
+if [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
+exit
+elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
+then
+echo -e ""$G"com.entynetproject.socfish"$C"/stable 1.8/"$R"socfish,social-fisher"$C""
+exit
+elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+echo -e ""$G"com.entynetproject.copycat"$C"/stable 1.5/"$R"copycat,copycat-toolkit"$C""
+exit
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+then
+echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"$C""
+exit
+elif [[ "$2" = "entropy" || "$2" = "CNVD-2017-02776" ]]
+then
+echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtsh" ]]
+then
+echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C""
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework" ]]
+then
+echo -e ""$G"com.entynetproject.arissploit"$C"/stable 3.1/"$R"arissploit,arissploit-framework"$C""
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework"  || "$2" = "ehtools-pro" ]]
+then
+echo -e ""$G"com.entynetproject.ehtools"$C"/stable 3.0.0/"$R"ehtools,ehtools-framework"$C""
+exit
+elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
+then
+echo -e ""$G"com.entynetproject.epkg"$C"/stable 1.2/"$R"epkg,entynet-packager"$C""
+exit
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
+then
+echo -e ""$G"com.entynetproject.geospy"$C"/stable 2.0/"$R"geospy,geolocation-spy"$C""
+exit
+elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+then
+echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
+exit
+elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
+then
+echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
+exit
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
+exit
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
+then
+echo -e ""$G"com.entynetproject.camsnap"$C"/stable 1.0/"$R"camsnap,camera-snapshot"$C""
+exit
+fi
+echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
+fi
+
+if [[ "$1" = "uninstall" ]]
+then
+if [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/epkg ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install epkg
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/copycat ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install copycat
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd copycat
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
+then
+cd ~
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+INI = "/usr/local/bin"
+else
+INI = "/bin"
+fi
+if [[ -d "$INI"/osfetch ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install osfetch
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd osfetch
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local uninstall
+else
+make uninstall
+fi
+exit
+
+elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/socfish ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install socfish
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd socfish
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/phonia ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install phonia
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd phonia
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/camsnap ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install camsnap
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd camsnap
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/geospy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install geospy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd geospy
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/invader ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install invader
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd invader/setup
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entypreter ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install entypreter
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd entypreter
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+then
+cd ~
+if [[ -f /usr/local/bin/mouse ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install mouse
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd mouse
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+
+elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/entropy ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install entropy
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd entropy
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+exit
+elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/ehtsh ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install ehtsh
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd ehtsh
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+exit
+elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
+then
+cd ~
+if [[ -d /usr/local/bin/honey ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install honey
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd honey
+chmod +x uninstall.sh
+./uninstall.sh
+cd ~
+sleep 0.5
+exit
+elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
+then
+cd ~
+if [[ -d /usr/local/bin/arissploit ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install arissploit
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd arissploit
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
+then
+cd ~
+if [[ -d /root/ehtools ]]
+then
+sleep 0.5
+else
+echo -e ""$N"epkg: "$O"warning: "$C""$2" is not installed"
+sleep 0.5
+echo -n "Do you want to install it? [Y/n]"
+read -p $' ' SAD
+if [[ "$SAD" = "n" || "$SAD" = "N" ]]
+then
+exit
+fi
+if [[ "$SAD" = "Y" || "$SAD" = "y" ]]
+then
+epkg install ehtools
+fi
+exit
+fi
+cd ~
+sleep 0.5
+echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
+cd /root/ehtools
+chmod +x uninstall.sh
+./uninstall.sh
+exit
+fi
+echo -e ""$N"epkg: "$R"error: "$C"package "$2" is not available"
+exit
+fi
+
+if [[ "$1" = "update" ]]
+then
+cd /etc
+sleep 1
+echo -e ""$BS"Installing update..."$C""
+{
+cd /etc
+cd epkg
+chmod +x uninstall.sh
+./uninstall.sh
+cd /etc
+sleep 0.5
+{
+git clone https://github.com/entynetproject/epkg.git
+} &> /dev/null
+cd /etc/epkg
+chmod +x install.sh
+./install.sh
+} &> /dev/null
+sleep 1
+echo -e ""$G"Successfully updated..."$C""
+sleep 1
+exit
+fi
+
+sleep 1
+echo
+cat /etc/epkg/banner/banner.txt
+echo
+echo  "Usage: epkg [OPTION...] <package>"
+echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
+echo 
+echo   "   install   <package>  Install selected package."
+echo   "   uninstall <package>  Uninstall installed package."
+echo   "   reinstall <package>  Reinstall installed package."
+echo   "   search    <package>  Search for the packages."                   
+echo   "   update               Update Entynet Packager."
+echo   "   pkg-list             Show all available packages."
+echo   "   options              Show Entynet Packager options."
+echo
+exit
