@@ -45,7 +45,6 @@ fi
 
 printf '\033]2;Entynet Packager\a'
 
-cd /etc
 if [[ -d /etc/epkg ]]
 then
 {
@@ -59,16 +58,13 @@ ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current
 } &> /dev/null
 if [[ "$ASESR" != "" ]]
 then 
-cd ~
+cd /etc
 {
 git clone https://github.com/entynetproject/epkg.git
-cd ~/epkg
-rm /bin/epkg
-rm /usr/local/bin/epkg
-chmod +x install.sh
-./install.sh
 cd /etc/epkg
 } &> /dev/null
+cd /etc
+cd /etc/epkg
 chmod +x epkg
 ./epkg $1 $2 $3 $4 $5 $6 $7 $8 $9
 else
