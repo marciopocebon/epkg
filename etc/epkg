@@ -614,7 +614,13 @@ exit
 elif [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 cd ~
-if [[ -d /usr/local/bin/osfetch ]]
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+INI = "/usr/local/bin"
+else
+INI = "/bin"
+fi
+if [[ -d "$INI"/osfetch ]]
 then
 sleep 0.5
 else
@@ -636,14 +642,24 @@ cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 cd osfetch
-sudo make uninstall
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local uninstall
+else
+make uninstall
+fi
 cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/osfetch.git
 } &> /dev/null
 cd osfetch
-sudo make install
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+make PREFIX=/usr/local install
+else
+make install
+fi
 exit
 
 elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
@@ -1285,7 +1301,7 @@ echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd osfetch
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-make PREFIX=/usr/local install
+make PREFIX=/usr/local uninstall
 else
 make uninstall
 fi
