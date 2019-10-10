@@ -41,36 +41,25 @@ sleep 1
 exit
 fi
 
-cd ~
-
-if [[ -d ~/epkg ]]
+if [[ -d /etc/epkg ]]
 then
-sleep 0.5
-else
-cd ~
-sleep 0.5
+cd /etc/epkg
 {
-git clone https://github.com/entynetproject/epkg.git
-} &> /dev/null
-cd epkg
-chmod +x install.sh
-fi
-{
-mkdir /etc/epkg
-cp ~/epkg/etc/epkg /etc/epkg
-mkdir /etc/epkg/epkg.cfg.d
-} &> /dev/null
-sleep 0.5
-{
-cp ~/epkg/bin/epkg /bin
-} &> /dev/null
-sleep 0.5
-{
-cp ~/epkg/bin/epkg /usr/local/bin
-} &> /dev/null
-sleep 0.5
-{
-chmod +x /etc/epkg/epkg
+cp epkg /bin
+cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
 } &> /dev/null
+cd /etc/epkg
+else
+cd /etc
+{
+git clone https://github.com/entynetproject/epkg.git
+cd /etc/epkg
+cp epkg /bin
+cp epkg /usr/local/bin
+chmod +x /bin/epkg
+chmod +x /usr/local/bin/epkg
+} &> /dev/null
+cd /etc/epkg
+fi
