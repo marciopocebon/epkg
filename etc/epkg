@@ -428,7 +428,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
@@ -446,7 +446,7 @@ epkg reinstall ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$O"install: "$C""$2""
 {
@@ -995,7 +995,7 @@ chmod +x install.sh
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
@@ -1014,12 +1014,12 @@ epkg install ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 cd ehtsh
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$B"reinstall: "$C""$2""
 {
@@ -1542,7 +1542,7 @@ sleep 0.5
 exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
-cd /etc
+cd ~
 if [[ -d /usr/local/bin/ehtsh ]]
 then
 sleep 0.5
@@ -1561,13 +1561,13 @@ epkg install ehtsh
 fi
 exit
 fi
-cd /etc
+cd ~
 sleep 0.5
 echo -e ""$N"epkg: "$R"uninstall: "$C""$2""
 cd ehtsh
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
