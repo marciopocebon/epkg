@@ -25,7 +25,7 @@
         R="\033[1;31m" # Red
         N="\033[1;37m" # White
         G="\033[32m" # Green
-        O="\033[1;93m" # Yellow
+        O="\033[1;33m" # Yellow
         B="\033[34m" #Blue
         C="\033[0m" #End
 
