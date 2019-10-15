@@ -32,13 +32,10 @@
 
 printf '\033]2;Entynet Packager\a'
 
-WHO="$( whoami )"
-
-if [[ "$WHO" != "root" ]]
-then
-sleep 0.5
-echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
-exit
+if [[ $EUID -ne 0 ]]; then
+   sleep 0.5
+   echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
+exit 1
 fi
 
 if [[ -d ~/epkg ]]
