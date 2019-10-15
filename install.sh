@@ -49,17 +49,6 @@ cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
-if [[ -d /etc/epkg ]]
-then
-rm -r /etc/epkg
-mkdir /etc/epkg
-cp epkg /etc/epkg
-chmod +x /etc/epkg/epkg
-else
-mkdir /etc/epkg
-cp epkg /etc/epkg
-chmod +x /etc/epkg/epkg
-fi
 } &> /dev/null
 cd ~/epkg
 else
@@ -71,17 +60,6 @@ cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
-if [[ -d /etc/epkg ]]
-then
-rm -r /etc/epkg
-mkdir /etc/epkg
-cp epkg /etc/epkg
-chmod +x /etc/epkg/epkg
-else
-mkdir /etc/epkg
-cp epkg /etc/epkg
-chmod +x /etc/epkg/epkg
-fi
 } &> /dev/null
 cd ~/epkg
 fi
