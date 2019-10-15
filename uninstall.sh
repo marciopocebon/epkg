@@ -42,7 +42,6 @@ exit
 fi
 
 {
-rm -r /etc/epkg
 rm /bin/epkg
 rm /usr/local/bin/epkg
 rm -r ~/epkg
