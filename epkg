@@ -25,17 +25,18 @@
         R="\033[1;31m" # Red
         N="\033[1;37m" # White
         G="\033[32m" # Green
-        O="\033[1;93m" # Orange
+        O="\033[1;33m" # Orange/Yellow
         B="\033[1;34m" #Blue
         C="\033[0m" #End
         BS="\033[34m" #Blue
 
 printf '\033]2;Entynet Packager\a'
 
-if [[ $EUID -ne 0 ]]; then
+if [[ $EUID -ne 0 ]]
+then
    sleep 0.5
    echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
-exit 1
+exit
 fi
 
 if [[ -d ~/epkg ]]
