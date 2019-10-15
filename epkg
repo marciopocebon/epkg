@@ -41,14 +41,14 @@ echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
 exit
 fi
 
-if [[ -d /etc/epkg ]]
+if [[ -d ~/epkg ]]
 then
-cd /etc/epkg
+cd ~/epkg
 else
-cd /etc
+cd ~
 {
 git clone https://github.com/entynetproject/epkg.git
-cd /etc/epkg
+cd ~/epkg
 } &> /dev/null
 fi
 
@@ -56,7 +56,7 @@ if [[ "$1" = "options" || "$1" = "help" ]]
 then
 sleep 1
 echo
-cat /etc/epkg/banner/banner.txt
+cat ~/epkg/banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
@@ -336,7 +336,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/mouse ]]
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -427,7 +427,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/ehtsh ]]
+if [[ -d ~/ehtsh ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$O"warning: "$C""$2" is already installed"
@@ -885,7 +885,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/mouse ]]
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 else
@@ -994,7 +994,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/ehtsh ]]
+if [[ -d ~/ehtsh ]]
 then
 sleep 0.5
 else
@@ -1482,7 +1482,7 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/mouse ]]
+if [[ -d ~/mouse ]]
 then
 sleep 0.5
 else
@@ -1541,7 +1541,7 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/ehtsh ]]
+if [[ -d ~/ehtsh ]]
 then
 sleep 0.5
 else
@@ -1661,20 +1661,20 @@ fi
 
 if [[ "$1" = "update" ]]
 then
-cd /etc
+cd ~
 sleep 1
 echo -e ""$BS"Installing update..."$C""
 {
-cd /etc
+cd ~
 cd epkg
 chmod +x uninstall.sh
 ./uninstall.sh
-cd /etc
+cd ~
 sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
-cd /etc/epkg
+cd ~/epkg
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
@@ -1686,7 +1686,7 @@ fi
 
 sleep 1
 echo
-cat /etc/epkg/banner/banner.txt
+cat ~/epkg/banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
