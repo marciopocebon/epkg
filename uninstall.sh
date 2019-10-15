@@ -22,16 +22,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-        R="\033[1;31m" # Red
-        N="\033[1;37m" # White
-        G="\033[32m" # Green
-        O="\033[1;33m" # Yellow
-        B="\033[34m" #Blue
-        C="\033[0m" #End
+RS="\033[1;31m"
+YS="\033[1;33m"
+CE="\033[0m"
 
 if [[ $EUID -ne 0 ]]
 then
-   echo "["$R"*"$C"] "$R"This script must be run as "$O"root"$C"" 1>&2
+   echo "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$C"" 1>&2
    exit
 fi
 
