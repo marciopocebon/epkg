@@ -26,11 +26,12 @@
         N="\033[1;37m" # White
         G="\033[32m" # Green
         O="\033[1;93m" # Orange
+        Y="\033[1;33m" # Yellow
         B="\033[34m" #Blue
         C="\033[0m" #End
 
 if [[ $EUID -ne 0 ]]; then
-   echo "[!] This script must be run as root" 1>&2
+   echo "["$R"*"$C"] "$R"This script must be run as "$Y"root"$C"" 1>&2
    exit 1
 fi
 
