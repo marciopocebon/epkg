@@ -30,9 +30,10 @@
         B="\033[34m" #Blue
         C="\033[0m" #End
 
-if [[ $EUID -ne 0 ]]; then
+if [[ $EUID -ne 0 ]]
+then
    echo "["$R"*"$C"] "$R"This script must be run as "$Y"root"$C"" 1>&2
-   exit 1
+   exit
 fi
 
 if [[ -d ~/epkg ]]
