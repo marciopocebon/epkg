@@ -29,16 +29,9 @@
         B="\033[1;34m" #Blue
         C="\033[0m" #End
 
-WHO="$( whoami )"
-
-if [[ "$WHO" != "root" ]]
-then
-sleep 1
-echo -e "$R"run it as"$C" "$O"root"$C"
-sleep 1
-echo -e "$R"or use"$C" "$O"sudo"$C"
-sleep 1
-exit
+if [[ $EUID -ne 0 ]]; then
+   echo "[!] This script must be run as root" 1>&2
+   exit 1
 fi
 
 {
