@@ -41,25 +41,47 @@ sleep 1
 exit
 fi
 
+if [[ -d ~/epkg ]]
+then
+cd ~/epkg
+{
+cp epkg /bin
+cp epkg /usr/local/bin
+chmod +x /bin/epkg
+chmod +x /usr/local/bin/epkg
 if [[ -d /etc/epkg ]]
 then
-cd /etc/epkg
-{
-cp epkg /bin
-cp epkg /usr/local/bin
-chmod +x /bin/epkg
-chmod +x /usr/local/bin/epkg
-} &> /dev/null
-cd /etc/epkg
+rm -r /etc/epkg
+mkdir /etc/epkg
+cp epkg /etc/epkg
+chmod +x /etc/epkg/epkg
 else
-cd /etc
+mkdir /etc/epkg
+cp epkg /etc/epkg
+chmod +x /etc/epkg/epkg
+fi
+} &> /dev/null
+cd ~/epkg
+else
+cd ~
 {
 git clone https://github.com/entynetproject/epkg.git
-cd /etc/epkg
+cd ~/epkg
 cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
+if [[ -d /etc/epkg ]]
+then
+rm -r /etc/epkg
+mkdir /etc/epkg
+cp epkg /etc/epkg
+chmod +x /etc/epkg/epkg
+else
+mkdir /etc/epkg
+cp epkg /etc/epkg
+chmod +x /etc/epkg/epkg
+fi
 } &> /dev/null
-cd /etc/epkg
+cd ~/epkg
 fi
