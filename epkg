@@ -330,7 +330,7 @@ chmod +x install.sh
 exit
 
 
-elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+elif [[ "$2" = "mouse" || "$2" = "mouse-loader" ]]
 then
 cd ~
 if [[ -f /usr/local/bin/mouse ]]
@@ -559,7 +559,7 @@ echo -e ""$G"com.entynetproject.phonia"$C"/stable 1.4/"$R"phonia,phonia-toolkit"
 echo -e ""$G"com.entynetproject.entropy"$C"/stable 1.7/"$R"entropy,entropy-exploit"$C""
 echo -e ""$G"com.entynetproject.ehtsh"$C"/stable 1.3/"$R"ehtsh,ehtools-shell"$C""
 echo -e ""$G"com.entynetproject.honey"$C"/stable 1.9/"$R"honey,honey-encryptor"$C""
-echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
+echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-loader"$C""
 echo -e ""$G"com.entynetproject.arissploit"$C"/stable 3.1/"$R"arissploit,arissploit-framework"$C""
 echo -e ""$G"com.entynetproject.entypreter"$C"/stable 5.1/"$R"entypreter,entypreter-rootkit"$C""
 echo -e ""$G"com.entynetproject.invader"$C"/stable 1.8/"$R"invader,invader-framework"$C""
@@ -879,7 +879,7 @@ chmod +x install.sh
 ./install.sh
 exit
 
-elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+elif [[ "$2" = "mouse" || "$2" = "mouse-loader" ]]
 then
 cd ~
 if [[ -f /usr/local/bin/mouse ]]
@@ -1183,9 +1183,9 @@ elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 echo -e ""$G"com.entynetproject.geospy"$C"/stable 2.0/"$R"geospy,geolocation-spy"$C""
 exit
-elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+elif [[ "$2" = "mouse" || "$2" = "mouse-loader" ]]
 then
-echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-payload"$C""
+echo -e ""$G"com.entynetproject.mouse"$C"/stable 1.6/"$R"mouse,mouse-loader"$C""
 exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
@@ -1476,7 +1476,7 @@ chmod +x uninstall.sh
 ./uninstall.sh
 exit
 
-elif [[ "$2" = "mouse" || "$2" = "mouse-payload" ]]
+elif [[ "$2" = "mouse" || "$2" = "mouse-loader" ]]
 then
 cd ~
 if [[ -f /usr/local/bin/mouse ]]
