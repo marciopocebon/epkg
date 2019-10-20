@@ -36,7 +36,7 @@ fi
 
 if [[ -d ~/epkg ]]
 then
-cd ~/epkg
+cd ~/epkg/bin
 {
 cp epkg /bin
 cp epkg /usr/local/bin
@@ -48,7 +48,7 @@ else
 cd ~
 {
 git clone https://github.com/entynetproject/epkg.git
-cd ~/epkg
+cd ~/epkg/bin
 cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
