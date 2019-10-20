@@ -71,6 +71,11 @@ fi
 
 if [[ "$1" = "install" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: epkg $1 <package>"
+exit
+fi
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
@@ -569,6 +574,11 @@ fi
 
 if [[ "$1" = "reinstall" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: epkg $1 <package>"
+exit
+fi
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
@@ -1139,6 +1149,11 @@ fi
 
 if [[ "$1" = "search" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: epkg $1 <package>"
+exit
+fi
 if [[ "$2" = "osfetch" || "$2" = "os-fetch" ]]
 then
 echo -e ""$G"com.entynetproject.osfetch"$C"/stable 6.0.1/"$R"osfetch,os-fetch"$C""
@@ -1206,6 +1221,11 @@ fi
 
 if [[ "$1" = "uninstall" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: epkg $1 <package>"
+exit
+fi
 if [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
