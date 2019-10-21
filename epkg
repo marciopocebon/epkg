@@ -38,22 +38,11 @@ then
 exit
 fi
 
-if [[ -d ~/epkg ]]
-then
-cd ~/epkg
-else
-cd ~
-{
-git clone https://github.com/entynetproject/epkg.git
-cd ~/epkg
-} &> /dev/null
-fi
-
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
 sleep 1
 echo
-cat ~/epkg/banner/banner.txt
+cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
@@ -1703,7 +1692,7 @@ fi
 
 sleep 1
 echo
-cat ~/epkg/banner/banner.txt
+cat banner/banner.txt
 echo
 echo  "Usage: epkg [OPTION...] <package>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
