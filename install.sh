@@ -42,6 +42,8 @@ cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
+cp epkg /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/epkg
 } &> /dev/null
 cd ~/epkg
 else
@@ -53,6 +55,8 @@ cp epkg /bin
 cp epkg /usr/local/bin
 chmod +x /bin/epkg
 chmod +x /usr/local/bin/epkg
+cp epkg /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/epkg
 } &> /dev/null
 cd ~/epkg
 fi
