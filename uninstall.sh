@@ -37,5 +37,6 @@ fi
 {
 rm /bin/epkg
 rm /usr/local/bin/epkg
-rm -r ~/epkg
+rm -rf ~/epkg
+rm /data/data/com.termux/files/usr/bin/epkg
 } &> /dev/null
