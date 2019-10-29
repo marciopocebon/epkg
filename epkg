@@ -1667,6 +1667,16 @@ fi
 
 if [[ "$1" = "update" ]]
 then
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" != "" ]]
+then 
+sleep 1
+echo -e ""$R"Download failed!"$C""
+sleep 1
+exit
+fi
 cd ~
 sleep 1
 echo -e ""$BS"Installing update..."$C""
@@ -1685,7 +1695,7 @@ chmod +x install.sh
 ./install.sh
 } &> /dev/null
 sleep 1
-echo -e ""$G"Successfully updated..."$C""
+echo -e ""$G"Successfully updated!"$C""
 sleep 1
 exit
 fi
