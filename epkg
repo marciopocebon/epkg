@@ -1677,6 +1677,13 @@ echo -e ""$R"Download failed!"$C""
 sleep 1
 exit
 fi
+if [[ $EUID -ne 0 ]]
+then
+sleep 1
+echo -e ""$R"Permission denied!"$C""
+sleep 1
+exit
+fi
 cd ~
 sleep 1
 echo -e ""$BS"Installing update..."$C""
