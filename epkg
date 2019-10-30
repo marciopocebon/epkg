@@ -68,7 +68,13 @@ fi
 if [[ "$2" = "copycat" || "$2" = "copycat-toolkit" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/copycat ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/copycat ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -140,7 +146,13 @@ exit
 elif [[ "$2" = "socfish" || "$2" = "social-fisher" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/socfish ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/socfish ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -171,7 +183,13 @@ exit
 elif [[ "$2" = "phonia" || "$2" = "phonia-toolkit" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/phonia ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/phonia ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -202,7 +220,13 @@ exit
 elif [[ "$2" = "camsnap" || "$2" = "camera-snapshot" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/camsnap ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/camsnap ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -233,7 +257,13 @@ exit
 elif [[ "$2" = "invader" || "$2" = "invader-framework" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/invader ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/invader ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -264,7 +294,13 @@ exit
 elif [[ "$2" = "geospy" || "$2" = "geolocation-spy" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/geospy ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/geospy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -295,7 +331,13 @@ exit
 elif [[ "$2" = "entypreter" || "$2" = "entypreter-rootkit" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/entypreter ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/entypreter ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -327,7 +369,13 @@ exit
 elif [[ "$2" = "mouse" || "$2" = "mouse-loader" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/mouse ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/mouse ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -358,7 +406,13 @@ exit
 elif [[ "$2" = "epkg" || "$2" = "entynet-packager" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/epkg ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/epkg ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -388,7 +442,13 @@ exit
 elif [[ "$2" = "entropy" || "$2" = "entropy-exploit" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/entropy ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/entropy ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -418,7 +478,13 @@ exit
 elif [[ "$2" = "ehtsh" || "$2" = "ehtools-shell" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/ehtsh ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/ehtsh ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -448,7 +514,13 @@ exit
 elif [[ "$2" = "honey" || "$2" = "honey-encryptor" ]]
 then
 cd ~
-if [[ -f /usr/local/bin/honey ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/honey ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -478,7 +550,13 @@ exit
 elif [[ "$2" = "arissploit" || "$2" = "arissploit-framework"  ]]
 then
 cd ~
-if [[ -f /usr/local/bin/arissploit ]]
+if [[ -d /data/data/com.termux ]]
+then
+A="/data/data/com.termux/files/usr/bin"
+else
+A="/usr/local/bin"
+fi
+if [[ -f "$A"/arissploit ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
@@ -508,7 +586,7 @@ exit
 elif [[ "$2" = "ehtools" || "$2" = "ehtools-framework" ]]
 then
 cd ~
-if [[ -d /root/ehtools ]]
+if [[ -d /bin/ehtools ]]
 then
 sleep 0.5
 echo -e ""$N"epkg: "$Y"warning: "$C""$2" is already installed"
