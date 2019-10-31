@@ -1936,6 +1936,22 @@ fi
 
 if [[ "$1" = "update" ]]
 then
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/epkg ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/epkg ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
 } &> /dev/null
@@ -1966,9 +1982,14 @@ sleep 0.5
 {
 git clone https://github.com/entynetproject/epkg.git
 } &> /dev/null
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
 cd ~/epkg
 chmod +x install.sh
 ./install.sh
+fi
 } &> /dev/null
 sleep 1
 echo -e ""$G"Successfully updated!"$C""
