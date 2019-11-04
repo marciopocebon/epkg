@@ -48,6 +48,7 @@ chmod +x /data/data/com.termux/files/usr/bin/epkg
 } &> /dev/null
 cd ~/epkg
 else
+sleep 1
 cd ~
 {
 git clone https://github.com/entynetproject/epkg.git
