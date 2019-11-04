@@ -36,6 +36,7 @@ fi
 
 if [[ -d ~/epkg ]]
 then
+sleep 3
 cd ~/epkg/bin
 {
 cp epkg /bin
