@@ -30,13 +30,13 @@
         C="\033[0m" #End
         BS="\033[34m" #Blue
 
-printf '\033]2;Entynet Packager\a'
-
 if [[ $EUID -ne 0 ]]
 then
    echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
 exit
 fi
+
+printf '\033]2;Entynet Packager\a'
 
 if [[ "$1" = "options" || "$1" = "help" ]]
 then
