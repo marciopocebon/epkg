@@ -31,12 +31,6 @@
 
 printf '\033]2;Entynet Packager\a'
 
-if [[ $EUID -ne 0 ]]
-then
-   echo -e ""$N"epkg: "$R"error: "$C"run epkg as root"
-exit
-fi
-
 cd ~
 if [[ -d ~/epkg ]]
 then
